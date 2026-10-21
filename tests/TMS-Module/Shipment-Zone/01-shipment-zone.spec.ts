@@ -1,0 +1,107 @@
+import { test, expect } from "@playwright/test";
+
+// ==========================================
+// ⚙️ Global Config (แก้ไขข้อมูลเทสได้ที่นี่)
+// ==========================================
+const BASE_URL = "/#/global-search";
+const TEST_CODE = "AT000";
+const TEST_NAME_CREATE = "ATest Shipment Zone";
+const TEST_NAME_UPDATE_1 = "ATest Shipment Zone Update";
+const TEST_NAME_UPDATE_2 = "ATest Shipment Zone Update 2";
+const WAIT_TIME = 2000; // เวลาหน่วง (มิลลิวินาที)
+
+test("Shipment Zone - CRUD Flow", async ({ page }) => {
+  // ---------- 1. เข้าหน้า TMS & Navigate Menu ----------
+  await page.goto(BASE_URL);
+
+  const tmsMode = page.getByTitle("Transportation Management").first();
+  await tmsMode.waitFor({ state: "visible" });
+  await tmsMode.click();
+
+  const transportMenu = page.getByRole("button", { name: "menu" });
+  await transportMenu.waitFor({ state: "visible" });
+  await page.waitForTimeout(WAIT_TIME);
+  await transportMenu.click();
+
+  const masterMgmt = page.getByRole("button", { name: "Master Management" });
+  await masterMgmt.waitFor({ state: "visible" });
+  await masterMgmt.click();
+
+  await page.getByRole("button", { name: "Shipments" }).click();
+  await page.getByRole("button", { name: "Product" }).click();
+  await page.getByRole("button", { name: "Shipment Zone" }).click();
+
+  // ---------- 2. Create (สร้างข้อมูลใหม่) ----------
+  await page.waitForTimeout(WAIT_TIME);
+  const createButton = page.locator("button").nth(1);
+  await createButton.click();
+
+  await page.locator('input[name="code"]').click();
+  await page.locator('input[name="code"]').fill(TEST_CODE);
+
+  await page.locator('input[name="name"]').click();
+  await page.locator('input[name="name"]').fill(TEST_NAME_CREATE);
+
+  await page.locator('#dropdown-select-in-formik').getByRole('textbox').click();
+  await page.getByRole('menuitem', { name: 'Active', exact: true }).click();
+
+  await page.getByRole("button", { name: "Save" }).click();
+  await page.getByRole("button", { name: "OK" }).click();
+
+  // ---------- 3. View / Back (ดูรายละเอียดและกลับ) ----------
+  await page.waitForTimeout(WAIT_TIME);
+
+  const searchInput = page.getByPlaceholder("Search").or(page.getByRole("textbox").first());
+  await searchInput.fill(TEST_CODE);
+  await page.waitForTimeout(WAIT_TIME);
+  await page.getByText(TEST_CODE, { exact: true }).click();
+
+  // ปุ่ม Back (ไอคอนดูรายละเอียด)
+  const backBtn = page.locator("button").nth(2);
+  await backBtn.click();
+
+  // ---------- 4. Update ครั้งที่ 1 (แก้ผ่านเมนูด้านใน) ----------
+  await searchInput.fill(TEST_CODE);
+  await page.waitForTimeout(WAIT_TIME);
+  await page.getByText(TEST_CODE, { exact: true }).click();
+
+  // ปุ่ม Update/Edit (ไอคอนแก้ไข)
+  const updateBtnMenu = page.locator("button").nth(1);
+  await updateBtnMenu.click();
+
+  // แก้ไขรายละเอียด
+  await page.waitForTimeout(WAIT_TIME);
+  await page.locator('input[name="name"]').fill(TEST_NAME_UPDATE_1);
+
+  await page.getByRole("button", { name: "Save" }).click();
+  await page.getByRole("button", { name: "OK" }).click();
+  await page.waitForTimeout(WAIT_TIME);
+
+  // ---------- 5. Update ครั้งที่ 2 (แก้ผ่านปุ่มหน้าตาราง Grid) ----------
+  await searchInput.fill(TEST_CODE);
+  await page.waitForTimeout(WAIT_TIME);
+
+  const row = page.locator("tr", { hasText: TEST_CODE });
+  const updateBtn = row.locator("button").nth(0);
+  await updateBtn.click({ force: true });
+
+  // แก้ไขรายละเอียด
+  await page.waitForTimeout(WAIT_TIME);
+  await page.locator('input[name="name"]').fill(TEST_NAME_UPDATE_2);
+
+  await page.getByRole("button", { name: "Save" }).click();
+  await page.getByRole("button", { name: "OK" }).click();
+  await page.waitForTimeout(WAIT_TIME);
+
+  // ---------- 6. Delete (ลบข้อมูล) ----------
+  await searchInput.fill(TEST_CODE);
+  await page.waitForTimeout(WAIT_TIME);
+  
+  const deleteBtn = row.locator("button").nth(1);
+  await deleteBtn.click({ force: true });
+  
+  // ยืนยันการลบ
+  await page.getByRole("button", { name: "OK" }).click();
+
+  await page.pause();
+});
