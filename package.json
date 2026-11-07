@@ -19,10 +19,12 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.62.1",
+    "@playwright/test": "^1.65.0",
     "@types/node": "^26.2.0",
     "allure": "^0.0.0",
-    "allure-commandline": "^2.29.0",
-    "allure-playwright": "^3.10.2"
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.14.0",
+    "rimraf": "^6.1.4",
+    "typescript": "^7.0.2"
   }
 }
