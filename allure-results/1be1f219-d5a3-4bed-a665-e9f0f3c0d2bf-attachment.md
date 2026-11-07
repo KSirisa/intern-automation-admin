@@ -1,0 +1,221 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\TMS-Module\Employees\01-employee.spec.ts >> Employees
+- Location: tests\TMS-Module\Employees\01-employee.spec.ts:27:5
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for getByRole('button', { name: 'OK' })
+
+```
+
+# Test source
+
+```ts
+  17  | const TEST_NATIONAL_ID = "1234567890123";
+  18  | 
+  19  | const TEST_BU_SEARCH = "AGG";
+  20  | const TEST_BU_NAME = "AGG UAT";
+  21  | const TEST_ENABLE_STATUS = "Active";
+  22  | const TEST_EMPLOYEE_TYPE = "Employee";
+  23  | 
+  24  | const TEST_FIRSTNAME_UPDATE = "ชื่อจริง";
+  25  | const TEST_LASTNAME_UPDATE = "นามสกุล";
+  26  | 
+  27  | test("Employees", async ({ page }) => {
+  28  |   // ==========================================
+  29  |   // 🛠️ Helper Functions
+  30  |   // ==========================================
+  31  | 
+  32  |   // 1. ตัวช่วยค้นหาพนักงานผ่านช่อง ค้นหาหลัก (แบบลด Event ป้องกันหน้าจอค้าง)
+  33  |   const searchEmployee = async (keyword: string) => {
+  34  |     await page.waitForTimeout(WAIT_TIME);
+  35  | 
+  36  |     // ระบุ Input ตัวแรกที่เจอบนหน้าจอ
+  37  |     const searchInput = page
+  38  |       .getByPlaceholder(/Filter|Search/i)
+  39  |       .or(page.getByRole("textbox").first());
+  40  | 
+  41  |     await searchInput.waitFor({ state: "visible" });
+  42  |     await searchInput.click();
+  43  |     
+  44  |     // เคลียร์ค่าและเติมด้วย fill แบบตรงๆ เพื่อหลีกเลี่ยง Event ลูป
+  45  |     await searchInput.fill(keyword);
+  46  |     await searchInput.press("Enter");
+  47  | 
+  48  |     await page.waitForTimeout(WAIT_TIME);
+  49  |   };
+  50  | 
+  51  |   // 2. ตัวช่วยคลิกเปิด Dropdown (Material-UI) ด้วยชื่อ Label
+  52  |   const openDropdown = async (labelRegex: RegExp) => {
+  53  |     await page
+  54  |       .locator("label")
+  55  |       .filter({ hasText: labelRegex })
+  56  |       .locator("..")
+  57  |       .click();
+  58  |   };
+  59  | 
+  60  |   // ==========================================
+  61  |   //  Test Steps
+  62  |   // ==========================================
+  63  | 
+  64  |   await test.step("1. Navigate to Product Master", async () => {
+  65  |     await page.goto(BASE_URL);
+  66  | 
+  67  |     // เปิดเมนูหลัก
+  68  |     await page.getByTitle("Transportation Management").first().click();
+  69  |     const transportMenu = page.getByRole("button", { name: "menu" });
+  70  |     await transportMenu.waitFor({ state: "visible" });
+  71  |     await page.waitForTimeout(WAIT_TIME);
+  72  |     await transportMenu.click();
+  73  | 
+  74  |     // เข้าสู่หน้า Employees
+  75  |     await page.getByRole("button", { name: "Master Management" }).hover();
+  76  |     await page.getByRole("button", { name: "Employees" }).click();
+  77  |     await page.waitForTimeout(WAIT_TIME);
+  78  |   });
+  79  | 
+  80  |   await test.step("2. Create New Employee (Fixed ID)", async () => {
+  81  |     await page.locator("button").nth(1).click(); // ปุ่ม Create
+  82  | 
+  83  |     // --- กรอกข้อมูล Textbox ทั่วไป ---
+  84  |     await page.locator('input[name="employeeId"]').fill(TARGET_EMPLOYEE_ID);
+  85  |     await page.locator('input[name="title"]').fill(TEST_TITLE);
+  86  |     await page.locator('input[name="firstName"]').fill(TEST_FIRSTNAME);
+  87  |     await page.locator('input[name="lastName"]').fill(TEST_LASTNAME);
+  88  |     await page.locator('input[name="phone"]').fill(TEST_PHONE);
+  89  |     await page.locator('input[name="nationalId"]').fill(TEST_NATIONAL_ID);
+  90  | 
+  91  |     // --- เลือกข้อมูล Dropdown ---
+  92  |     await openDropdown(/Gender/i);
+  93  |     await page
+  94  |       .getByRole("menuitem", { name: TEST_GENDER, exact: true })
+  95  |       .click();
+  96  | 
+  97  |     await openDropdown(/Business Unit/i);
+  98  |     await page.getByRole("textbox").fill(TEST_BU_SEARCH);
+  99  |     await page.getByText(TEST_BU_NAME).click();
+  100 | 
+  101 |     await openDropdown(/Enable/i);
+  102 |     await page.getByRole("menuitem", { name: TEST_ENABLE_STATUS, exact: true }).click();
+  103 | 
+  104 |     await openDropdown(/Type/i);
+  105 |     await page.getByRole("menuitem", { name: TEST_EMPLOYEE_TYPE }).click();
+  106 | 
+  107 |     // --- บันทึกข้อมูล ---
+  108 |     await page.getByRole("button", { name: "Save" }).click();
+  109 |     await page.getByRole("button", { name: "OK" }).click();
+  110 |     await page.waitForTimeout(WAIT_TIME);
+  111 |   });
+  112 | 
+  113 |   await test.step("3. Import / Export Data", async () => {
+  114 |     // --- Import Flow ---
+  115 |     await page.locator("button").nth(2).click(); // ปุ่ม Import
+  116 |     await page.locator("button").nth(1).click(); // ปุ่ม Download Template
+> 117 |     await page.getByRole("button", { name: "OK" }).click();
+      |                                                    ^ Error: locator.click: Target page, context or browser has been closed
+  118 | 
+  119 |     await page.getByLabel("Upload").setInputFiles(IMPORT_FILE_PATH);
+  120 |     await page.getByRole("button", { name: "Clear" }).click();
+  121 |     await page.getByLabel("Upload").setInputFiles(IMPORT_FILE_PATH);
+  122 |     await page.getByRole("button", { name: "Import" }).click();
+  123 |     await page.waitForTimeout(WAIT_TIME);
+  124 | 
+  125 |     // --- Export Flow ---
+  126 |     await page.locator("button").nth(3).click(); // ปุ่ม Export
+  127 |     await page.getByRole("button", { name: "OK" }).click();
+  128 |     await page.waitForTimeout(WAIT_TIME);
+  129 |   });
+  130 |   
+  131 |   await test.step("4. Advanced Search", async () => {
+  132 |     await page.getByRole("button", { name: "Search Total :" }).click();
+  133 | 
+  134 |     // --- ค้นหาด้วย Business Unit ---
+  135 |     await openDropdown(/Business Unit/i);
+  136 |     await page
+  137 |       .getByRole("checkbox", { name: "Include Sub Business Units" })
+  138 |       .uncheck();
+  139 |     await page
+  140 |       .getByRole("checkbox", { name: "Include Sub Business Units" })
+  141 |       .check();
+  142 |     await page.getByRole("textbox").fill(TEST_BU_SEARCH);
+  143 |     await page.waitForTimeout(WAIT_TIME);
+  144 |     await page.getByText(TEST_BU_NAME, { exact: true }).click({ force: true });
+  145 |     await page.keyboard.press("Escape");
+  146 |     await page.getByRole("button", { name: "Search", exact: true }).click();
+  147 |     await page.getByRole("button", { name: "clear" }).click();
+  148 | 
+  149 |     // --- ค้นหาด้วย Type ---
+  150 |     await openDropdown(/Type/i);
+  151 |     await page.getByRole("textbox").fill(TEST_EMPLOYEE_TYPE);
+  152 |     await page.getByRole("menuitem", { name: TEST_EMPLOYEE_TYPE }).click();
+  153 |     await page.keyboard.press("Escape");
+  154 |     await page.getByRole("button", { name: "Search", exact: true }).click();
+  155 | 
+  156 |     // --- Reset ค่าทั้งหมด ---
+  157 |     await page.getByRole("button", { name: "Reset" }).click();
+  158 |     await page.waitForTimeout(WAIT_TIME);
+  159 |   });
+  160 | 
+  161 |   await test.step("5. View Employee", async () => {
+  162 |     await searchEmployee(TARGET_EMPLOYEE_ID);
+  163 |     await page.getByText(TARGET_EMPLOYEE_ID, { exact: true }).click();
+  164 |     await page.waitForTimeout(WAIT_TIME);
+  165 | 
+  166 |     await page.locator("button").nth(2).click(); // ปุ่ม Back
+  167 |   });
+  168 | 
+  169 |   await test.step("6. Update Product (Details & Table)", async () => {
+  170 |     // --- แก้ไขผ่านหน้ารายละเอียด (Details) ---
+  171 |     await searchEmployee(TARGET_EMPLOYEE_ID);
+  172 |     await page.getByText(TARGET_EMPLOYEE_ID, { exact: true }).click();
+  173 |     await page.waitForTimeout(WAIT_TIME);
+  174 | 
+  175 |     await page.locator("button").nth(1).click(); // ปุ่ม Edit
+  176 |     await page.waitForTimeout(WAIT_TIME);
+  177 |     await page.locator('input[name="firstName"]').fill(TEST_FIRSTNAME_UPDATE);
+  178 |     await page.getByRole("button", { name: "Save" }).click();
+  179 |     await page.getByRole("button", { name: "OK" }).click();
+  180 |     await page.waitForTimeout(WAIT_TIME);
+  181 | 
+  182 |     // --- แก้ไขผ่าน row (Details) ---
+  183 |     await searchEmployee(TARGET_EMPLOYEE_ID);
+  184 |     const row = page.locator("tr").filter({
+  185 |       has: page.getByRole("cell", { name: TARGET_EMPLOYEE_ID, exact: true }),
+  186 |     });
+  187 |     const editBtn = row.locator("button").first();
+  188 |     await editBtn.waitFor({ state: "visible" });
+  189 |     await editBtn.click();
+  190 | 
+  191 |     await page.waitForTimeout(WAIT_TIME);
+  192 |     await page.locator('input[name="lastName"]').fill(TEST_LASTNAME_UPDATE);
+  193 |     await page.getByRole("button", { name: "Save" }).click();
+  194 |     await page.getByRole("button", { name: "OK" }).click();
+  195 |     await page.waitForTimeout(WAIT_TIME);
+  196 |   });
+  197 | 
+  198 |   await test.step("7. Delete Product", async () => {
+  199 |     await searchEmployee(TARGET_EMPLOYEE_ID);
+  200 |     const row = page.locator("tr").filter({
+  201 |       has: page.getByRole("cell", { name: TARGET_EMPLOYEE_ID, exact: true }),
+  202 |     });
+  203 |     const deleteBtn = row.locator("button").nth(1);
+  204 |     await deleteBtn.waitFor({ state: "visible" });
+  205 |     await deleteBtn.click();
+  206 | 
+  207 |     await page.getByRole("button", { name: "Cancel" }).click();
+  208 |     await page.waitForTimeout(WAIT_TIME);
+  209 |   });
+  210 | 
+  211 |   await page.pause();
+  212 | });
+```

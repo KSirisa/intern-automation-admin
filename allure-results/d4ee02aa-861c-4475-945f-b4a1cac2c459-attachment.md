@@ -1,0 +1,485 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\Admin-Module\TC009-Configurations\Alert\01-create-alert.spec.ts >> alert configurations test
+- Location: tests\Admin-Module\TC009-Configurations\Alert\01-create-alert.spec.ts:725:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - generic [ref=e1]:
+    - generic [ref=e3]:
+      - navigation [ref=e4]:
+        - button [expanded] [ref=e5]:
+          - img [ref=e6]:
+            - generic "background" [ref=e7]
+      - generic "Switch Task" [ref=e28] [cursor=pointer]
+      - generic [ref=e34]:
+        - generic [ref=e35]: Alert Configurations
+        - generic [ref=e39]: Create Alert Configuration
+      - link "Workspace Mode" [ref=e46] [cursor=pointer]:
+        - /url: /
+      - link "Hello, trainee03 UAT Corporation" [ref=e58] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e60]:
+          - generic [ref=e61]: Hello, trainee03
+          - generic [ref=e62]: UAT Corporation
+    - generic [ref=e63]:
+      - navigation [ref=e65]:
+        - button "Show Menu" [ref=e66] [cursor=pointer]
+        - list [ref=e70]:
+          - listitem [ref=e71] [cursor=pointer]:
+            - generic "Business Unit" [ref=e72]
+          - listitem [ref=e76] [cursor=pointer]:
+            - generic "Groups" [ref=e77]
+          - listitem [ref=e86] [cursor=pointer]:
+            - generic "Users" [ref=e87]
+          - listitem [ref=e92] [cursor=pointer]:
+            - generic "Assets" [ref=e93]
+          - listitem [ref=e100] [cursor=pointer]:
+            - generic "Maintenance" [ref=e101]
+          - listitem [ref=e109] [cursor=pointer]:
+            - generic "Driver Checklist" [ref=e110]
+          - listitem [ref=e117] [cursor=pointer]:
+            - generic "Driver Performance Rules" [ref=e118]
+          - listitem [ref=e122] [cursor=pointer]:
+            - generic "Reports" [ref=e123]
+          - listitem [ref=e130] [cursor=pointer]:
+            - generic "Configurations" [ref=e131]
+          - listitem [ref=e137] [cursor=pointer]:
+            - generic "Cash Van" [ref=e138]
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e153]:
+              - generic:
+                - heading "Alert Configurations" [level=2] [ref=e154]
+                - heading [level=3]
+            - generic [ref=e155]:
+              - button "Alert Configurations" [ref=e158] [cursor=pointer]
+              - button "Minimize" [ref=e161] [cursor=pointer]
+              - button "Maximize" [ref=e166] [cursor=pointer]
+              - button "Close" [ref=e171] [cursor=pointer]
+            - list [ref=e179]:
+              - listitem [ref=e180]:
+                - generic "Create" [ref=e181] [cursor=pointer]
+              - listitem [ref=e186]:
+                - generic "Search" [ref=e187] [cursor=pointer]
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - textbox [ref=e208]:
+                  - /placeholder: Filter by Description
+                - generic [ref=e211]:
+                  - generic [ref=e212]: "20"
+                  - combobox [ref=e213] [cursor=pointer]:
+                    - option "20" [selected]
+                    - option "50"
+                    - option "100"
+                    - option "All"
+                - generic [ref=e214]: 20 of 130
+              - generic [ref=e215]:
+                - grid [ref=e218]:
+                  - rowgroup [ref=e219]:
+                    - row [ref=e220]:
+                      - 'columnheader "Alert Type: activate to sort column ascending" [ref=e221] [cursor=pointer]': Alert Type 
+                      - 'columnheader "Description: activate to sort column ascending" [ref=e222] [cursor=pointer]': Description 
+                      - 'columnheader "Website: activate to sort column ascending" [ref=e223] [cursor=pointer]': Website 
+                      - 'columnheader "Email: activate to sort column ascending" [ref=e224] [cursor=pointer]': Email 
+                      - 'columnheader "SMS: activate to sort column ascending" [ref=e225] [cursor=pointer]': SMS 
+                      - 'columnheader "Ticket: activate to sort column ascending" [ref=e226] [cursor=pointer]': Ticket 
+                      - 'columnheader "MDVR: activate to sort column ascending" [ref=e227] [cursor=pointer]': MDVR 
+                      - 'columnheader "Report: activate to sort column ascending" [ref=e228] [cursor=pointer]': Report 
+                      - 'columnheader "Line: activate to sort column ascending" [ref=e229] [cursor=pointer]': Line 
+                      - 'columnheader "Mobile: activate to sort column ascending" [ref=e230] [cursor=pointer]': Mobile 
+                      - 'columnheader "Priority: activate to sort column ascending" [ref=e231] [cursor=pointer]': Priority 
+                      - 'columnheader "Enable: activate to sort column ascending" [ref=e232] [cursor=pointer]': Enable 
+                - grid [ref=e234]:
+                  - rowgroup [ref=e235]:
+                    - row [ref=e236]:
+                      - gridcell "Rapid Acceleration Driving" [ref=e237]
+                      - gridcell "Rapid Acceleration Driving by Aum" [ref=e238]
+                      - gridcell "Yes" [ref=e239]
+                      - gridcell "No" [ref=e240]
+                      - gridcell "No" [ref=e241]
+                      - gridcell "Yes" [ref=e242]
+                      - gridcell "No" [ref=e243]
+                      - gridcell "No" [ref=e244]
+                      - gridcell "No" [ref=e245]
+                      - gridcell "No" [ref=e246]
+                      - gridcell "99" [ref=e247]
+                      - gridcell "No" [ref=e248]
+                    - row [ref=e249]:
+                      - gridcell "Gate Close" [ref=e250]
+                      - gridcell "Gate Close" [ref=e251]
+                      - gridcell "Yes" [ref=e252]
+                      - gridcell "No" [ref=e253]
+                      - gridcell "No" [ref=e254]
+                      - gridcell "Yes" [ref=e255]
+                      - gridcell "No" [ref=e256]
+                      - gridcell "Yes" [ref=e257]
+                      - gridcell "No" [ref=e258]
+                      - gridcell "No" [ref=e259]
+                      - gridcell "1" [ref=e260]
+                      - gridcell "Yes" [ref=e261]
+                    - row [ref=e262]:
+                      - gridcell "Gate Open" [ref=e263]
+                      - gridcell "Gate Open" [ref=e264]
+                      - gridcell "Yes" [ref=e265]
+                      - gridcell "No" [ref=e266]
+                      - gridcell "No" [ref=e267]
+                      - gridcell "Yes" [ref=e268]
+                      - gridcell "No" [ref=e269]
+                      - gridcell "Yes" [ref=e270]
+                      - gridcell "No" [ref=e271]
+                      - gridcell "No" [ref=e272]
+                      - gridcell "1" [ref=e273]
+                      - gridcell "Yes" [ref=e274]
+                    - row [ref=e275]:
+                      - gridcell "GPS Disconnected" [ref=e276]
+                      - gridcell "GPS Disconnect" [ref=e277]
+                      - gridcell "Yes" [ref=e278]
+                      - gridcell "No" [ref=e279]
+                      - gridcell "No" [ref=e280]
+                      - gridcell "Yes" [ref=e281]
+                      - gridcell "No" [ref=e282]
+                      - gridcell "Yes" [ref=e283]
+                      - gridcell "No" [ref=e284]
+                      - gridcell "No" [ref=e285]
+                      - gridcell "1" [ref=e286]
+                      - gridcell "No" [ref=e287]
+                    - row [ref=e288]:
+                      - gridcell "GPS Reconnected" [ref=e289]
+                      - gridcell "GPS Reconnect" [ref=e290]
+                      - gridcell "Yes" [ref=e291]
+                      - gridcell "No" [ref=e292]
+                      - gridcell "No" [ref=e293]
+                      - gridcell "Yes" [ref=e294]
+                      - gridcell "No" [ref=e295]
+                      - gridcell "Yes" [ref=e296]
+                      - gridcell "No" [ref=e297]
+                      - gridcell "No" [ref=e298]
+                      - gridcell "1" [ref=e299]
+                      - gridcell "No" [ref=e300]
+                    - row [ref=e301]:
+                      - gridcell "Moving" [ref=e302]
+                      - gridcell "Move" [ref=e303]
+                      - gridcell "Yes" [ref=e304]
+                      - gridcell "No" [ref=e305]
+                      - gridcell "No" [ref=e306]
+                      - gridcell "Yes" [ref=e307]
+                      - gridcell "No" [ref=e308]
+                      - gridcell "Yes" [ref=e309]
+                      - gridcell "Yes" [ref=e310]
+                      - gridcell "No" [ref=e311]
+                      - gridcell "1" [ref=e312]
+                      - gridcell "No" [ref=e313]
+                    - row [ref=e314]:
+                      - gridcell "Over Speed" [ref=e315]
+                      - gridcell "ความเร็วต่อเนื่อง > 60 กม./ชม." [ref=e316]
+                      - gridcell "Yes" [ref=e317]
+                      - gridcell "Yes" [ref=e318]
+                      - gridcell "No" [ref=e319]
+                      - gridcell "Yes" [ref=e320]
+                      - gridcell "Yes" [ref=e321]
+                      - gridcell "Yes" [ref=e322]
+                      - gridcell "No" [ref=e323]
+                      - gridcell "Yes" [ref=e324]
+                      - gridcell "1" [ref=e325]
+                      - gridcell "No" [ref=e326]
+                    - row [ref=e327]:
+                      - gridcell "Over Speed" [ref=e328]
+                      - gridcell "วิ่งเร็วเกิน 40 ทำไม!" [ref=e329]
+                      - gridcell "Yes" [ref=e330]
+                      - gridcell "Yes" [ref=e331]
+                      - gridcell "No" [ref=e332]
+                      - gridcell "Yes" [ref=e333]
+                      - gridcell "No" [ref=e334]
+                      - gridcell "Yes" [ref=e335]
+                      - gridcell "No" [ref=e336]
+                      - gridcell "Yes" [ref=e337]
+                      - gridcell "1" [ref=e338]
+                      - gridcell "Yes" [ref=e339]
+                    - row [ref=e340]:
+                      - gridcell "Over Speed" [ref=e341]
+                      - gridcell "Max Test Over Speed 20" [ref=e342]
+                      - gridcell "Yes" [ref=e343]
+                      - gridcell "No" [ref=e344]
+                      - gridcell "No" [ref=e345]
+                      - gridcell "No" [ref=e346]
+                      - gridcell "No" [ref=e347]
+                      - gridcell "No" [ref=e348]
+                      - gridcell "No" [ref=e349]
+                      - gridcell "No" [ref=e350]
+                      - gridcell "1" [ref=e351]
+                      - gridcell "Yes" [ref=e352]
+                    - row [ref=e353]:
+                      - gridcell "Over Speed" [ref=e354]
+                      - gridcell "Max Test Over speed 30" [ref=e355]
+                      - gridcell "Yes" [ref=e356]
+                      - gridcell "No" [ref=e357]
+                      - gridcell "No" [ref=e358]
+                      - gridcell "No" [ref=e359]
+                      - gridcell "No" [ref=e360]
+                      - gridcell "No" [ref=e361]
+                      - gridcell "No" [ref=e362]
+                      - gridcell "No" [ref=e363]
+                      - gridcell "1" [ref=e364]
+                      - gridcell "Yes" [ref=e365]
+                    - row [ref=e366]:
+                      - gridcell "Over Speed" [ref=e367]
+                      - gridcell "testtttttttttttttt23456789" [ref=e368]
+                      - gridcell "No" [ref=e369]
+                      - gridcell "No" [ref=e370]
+                      - gridcell "No" [ref=e371]
+                      - gridcell "No" [ref=e372]
+                      - gridcell "No" [ref=e373]
+                      - gridcell "No" [ref=e374]
+                      - gridcell "No" [ref=e375]
+                      - gridcell "No" [ref=e376]
+                      - gridcell "1" [ref=e377]
+                      - gridcell "No" [ref=e378]
+                    - row [ref=e379]:
+                      - gridcell "Over Speed" [ref=e380]
+                      - gridcell "test456" [ref=e381]
+                      - gridcell "No" [ref=e382]
+                      - gridcell "No" [ref=e383]
+                      - gridcell "No" [ref=e384]
+                      - gridcell "No" [ref=e385]
+                      - gridcell "No" [ref=e386]
+                      - gridcell "No" [ref=e387]
+                      - gridcell "No" [ref=e388]
+                      - gridcell "No" [ref=e389]
+                      - gridcell "1" [ref=e390]
+                      - gridcell "Yes" [ref=e391]
+                    - row [ref=e392]:
+                      - gridcell "Over Speed" [ref=e393]
+                      - gridcell "test789" [ref=e394]
+                      - gridcell "No" [ref=e395]
+                      - gridcell "No" [ref=e396]
+                      - gridcell "No" [ref=e397]
+                      - gridcell "No" [ref=e398]
+                      - gridcell "No" [ref=e399]
+                      - gridcell "No" [ref=e400]
+                      - gridcell "No" [ref=e401]
+                      - gridcell "No" [ref=e402]
+                      - gridcell "1" [ref=e403]
+                      - gridcell "Yes" [ref=e404]
+                    - row [ref=e405]:
+                      - gridcell "Over Speed" [ref=e406]
+                      - gridcell "test999" [ref=e407]
+                      - gridcell "No" [ref=e408]
+                      - gridcell "No" [ref=e409]
+                      - gridcell "No" [ref=e410]
+                      - gridcell "No" [ref=e411]
+                      - gridcell "No" [ref=e412]
+                      - gridcell "No" [ref=e413]
+                      - gridcell "No" [ref=e414]
+                      - gridcell "No" [ref=e415]
+                      - gridcell "1" [ref=e416]
+                      - gridcell "Yes" [ref=e417]
+                    - row [ref=e418]:
+                      - gridcell "Over Speed" [ref=e419]
+                      - gridcell "Overspeed > 60 Km/Hr" [ref=e420]
+                      - gridcell "Yes" [ref=e421]
+                      - gridcell "Yes" [ref=e422]
+                      - gridcell "No" [ref=e423]
+                      - gridcell "Yes" [ref=e424]
+                      - gridcell "No" [ref=e425]
+                      - gridcell "Yes" [ref=e426]
+                      - gridcell "Yes" [ref=e427]
+                      - gridcell "Yes" [ref=e428]
+                      - gridcell "1" [ref=e429]
+                      - gridcell "Yes" [ref=e430]
+                    - row [ref=e431]:
+                      - gridcell "Over Speed" [ref=e432]
+                      - gridcell "Tipco - ขับรถเร็วเกิน 41 กม/ชม." [ref=e433]
+                      - gridcell "Yes" [ref=e434]
+                      - gridcell "No" [ref=e435]
+                      - gridcell "No" [ref=e436]
+                      - gridcell "Yes" [ref=e437]
+                      - gridcell "Yes" [ref=e438]
+                      - gridcell "Yes" [ref=e439]
+                      - gridcell "No" [ref=e440]
+                      - gridcell "No" [ref=e441]
+                      - gridcell "1" [ref=e442]
+                      - gridcell "No" [ref=e443]
+                    - row [ref=e444]:
+                      - gridcell "Over Temperature" [ref=e445]
+                      - gridcell "Tipco - เครื่องร้อนจัด > 45oc" [ref=e446]
+                      - gridcell "Yes" [ref=e447]
+                      - gridcell "No" [ref=e448]
+                      - gridcell "No" [ref=e449]
+                      - gridcell "Yes" [ref=e450]
+                      - gridcell "Yes" [ref=e451]
+                      - gridcell "Yes" [ref=e452]
+                      - gridcell "No" [ref=e453]
+                      - gridcell "No" [ref=e454]
+                      - gridcell "1" [ref=e455]
+                      - gridcell "Yes" [ref=e456]
+                    - row [ref=e457]:
+                      - gridcell "Over Temperature" [ref=e458]
+                      - gridcell "Over Temperature > 40 oc" [ref=e459]
+                      - gridcell "Yes" [ref=e460]
+                      - gridcell "No" [ref=e461]
+                      - gridcell "No" [ref=e462]
+                      - gridcell "Yes" [ref=e463]
+                      - gridcell "No" [ref=e464]
+                      - gridcell "Yes" [ref=e465]
+                      - gridcell "No" [ref=e466]
+                      - gridcell "No" [ref=e467]
+                      - gridcell "1" [ref=e468]
+                      - gridcell "Yes" [ref=e469]
+                    - row [ref=e470]:
+                      - gridcell "Power Disconnected" [ref=e471]
+                      - gridcell "Power Disconnect" [ref=e472]
+                      - gridcell "Yes" [ref=e473]
+                      - gridcell "No" [ref=e474]
+                      - gridcell "No" [ref=e475]
+                      - gridcell "Yes" [ref=e476]
+                      - gridcell "No" [ref=e477]
+                      - gridcell "Yes" [ref=e478]
+                      - gridcell "No" [ref=e479]
+                      - gridcell "No" [ref=e480]
+                      - gridcell "1" [ref=e481]
+                      - gridcell "Yes" [ref=e482]
+                    - row [ref=e483]:
+                      - gridcell "Power Reconnected" [ref=e484]
+                      - gridcell "Power Reconnect" [ref=e485]
+                      - gridcell "Yes" [ref=e486]
+                      - gridcell "No" [ref=e487]
+                      - gridcell "No" [ref=e488]
+                      - gridcell "Yes" [ref=e489]
+                      - gridcell "No" [ref=e490]
+                      - gridcell "Yes" [ref=e491]
+                      - gridcell "No" [ref=e492]
+                      - gridcell "No" [ref=e493]
+                      - gridcell "1" [ref=e494]
+                      - gridcell "Yes" [ref=e495]
+            - button "Load more" [ref=e497] [cursor=pointer]
+        - generic [ref=e499]:
+          - generic [ref=e500]:
+            - generic [ref=e503]:
+              - generic:
+                - heading "Create Alert Configuration" [level=2] [ref=e504]
+                - heading [level=3]
+            - generic [ref=e505]:
+              - button "Create Alert Configuration" [ref=e508] [cursor=pointer]
+              - button "Minimize" [ref=e511] [cursor=pointer]
+              - button "Maximize" [ref=e516] [cursor=pointer]
+              - button "Close" [ref=e521] [cursor=pointer]
+          - generic [ref=e528]:
+            - generic [ref=e533]:
+              - generic [ref=e534]: Type
+              - generic [ref=e542]:
+                - combobox [ref=e543] [cursor=pointer]
+                - combobox [ref=e546] [cursor=pointer]:
+                  - textbox "Wide Turn" [ref=e547]
+              - generic [ref=e552] [cursor=pointer]:
+                - text: Alert when work under shipment only.
+                - checkbox "Alert when work under shipment only."
+              - generic [ref=e554]: Direction
+              - generic [ref=e559]:
+                - generic [ref=e560]: Both
+                - combobox "Direction" [ref=e561] [cursor=pointer]:
+                  - option "Both" [selected]
+                  - option "Turn Right"
+                  - option "Turn Left"
+              - generic [ref=e562]: Maneuver Level
+              - generic [ref=e567]:
+                - combobox [ref=e568] [cursor=pointer]
+                - combobox [active] [ref=e571] [cursor=pointer]:
+                  - textbox "Aggressive And Above" [ref=e572]
+              - generic [ref=e573]: Minimum Duration(second)
+              - textbox "Minimum Duration(second)" [ref=e580]
+              - generic [ref=e581]:
+                - generic [ref=e582]: Alert Categories
+                - generic [ref=e587]:
+                  - combobox [ref=e588] [cursor=pointer]
+                  - combobox [ref=e591] [cursor=pointer]:
+                    - textbox
+              - generic [ref=e592]: Priority
+              - textbox "Priority" [ref=e599]: "1"
+              - generic [ref=e600]: Enable
+              - generic "Required field" [ref=e608]:
+                - combobox "Enable" [ref=e610] [cursor=pointer]:
+                  - option [selected]
+                  - option "Yes"
+                  - option "No"
+              - generic [ref=e611]: Mail To
+              - generic [ref=e613] [cursor=pointer]
+              - textbox [ref=e618]
+              - generic [ref=e622] [cursor=pointer]:
+                - text: Auto Generate Ticket
+                - checkbox "Auto Generate Ticket"
+              - generic [ref=e627] [cursor=pointer]:
+                - text: MDVR
+                - checkbox "MDVR"
+              - generic [ref=e632] [cursor=pointer]:
+                - text: Remove Default Driver
+                - checkbox "Remove Default Driver"
+              - generic [ref=e637] [cursor=pointer]:
+                - text: Use Driver's Business Unit
+                - checkbox "Use Driver's Business Unit"
+              - generic [ref=e639]: Alert Via
+              - generic [ref=e644] [cursor=pointer]:
+                - text: Website
+                - checkbox "Website"
+              - generic [ref=e649] [cursor=pointer]:
+                - text: Email
+                - checkbox "Email"
+              - generic [ref=e654] [cursor=pointer]:
+                - text: SMS
+                - checkbox "SMS"
+              - generic [ref=e659] [cursor=pointer]:
+                - text: Interface
+                - checkbox "Interface"
+              - generic [ref=e664] [cursor=pointer]:
+                - text: Device
+                - checkbox "Device"
+              - generic [ref=e669] [cursor=pointer]:
+                - text: Report
+                - checkbox "Report"
+              - generic [ref=e674] [cursor=pointer]:
+                - text: Line
+                - checkbox "Line"
+              - generic [ref=e679] [cursor=pointer]:
+                - text: Mobile
+                - checkbox "Mobile"
+              - generic [ref=e681]: Description
+              - textbox "Description" [ref=e688]
+              - list [ref=e690]:
+                - listitem [ref=e691]:
+                  - link "Area Setting" [ref=e694] [cursor=pointer]:
+                    - /url: "#"
+              - list [ref=e699]:
+                - listitem [ref=e700]:
+                  - link "Date / Time Setting" [ref=e703] [cursor=pointer]:
+                    - /url: "#"
+              - list [ref=e708]:
+                - listitem [ref=e709]:
+                  - link "Assets* Required field" [ref=e712] [cursor=pointer]:
+                    - /url: "#"
+                    - text: Assets*
+                    - generic [ref=e713]: Required field
+              - list [ref=e718]:
+                - listitem [ref=e719]:
+                  - link "Permissions" [ref=e722] [cursor=pointer]:
+                    - /url: "#"
+            - generic [ref=e728]:
+              - button "Save" [ref=e730] [cursor=pointer]
+              - button "Cancel" [ref=e733] [cursor=pointer]
+  - status [ref=e735]
+```

@@ -1,0 +1,1 @@
+[Skipped] ไม่สามารถทำ "Click "Button OK Cancel"" ได้หลังจากพยายาม 3 ครั้ง

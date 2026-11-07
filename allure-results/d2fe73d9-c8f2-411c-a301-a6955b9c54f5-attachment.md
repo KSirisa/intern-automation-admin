@@ -1,0 +1,561 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\TMS-Module\Product\01-product-master.spec.ts >> Product Master - End to End Flow
+- Location: tests\TMS-Module\Product\01-product-master.spec.ts:25:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - banner [ref=f3e5]:
+      - generic [ref=f3e6]:
+        - generic [ref=f3e7]:
+          - button "menu" [ref=f3e9] [cursor=pointer]
+          - separator [ref=f3e22]
+          - paragraph [ref=f3e24]: Products
+        - generic [ref=f3e25]:
+          - generic [ref=f3e28]:
+            - button [ref=f3e29] [cursor=pointer]
+            - button [ref=f3e33] [cursor=pointer]
+            - button [ref=f3e37] [cursor=pointer]
+          - separator [ref=f3e43]
+          - generic [ref=f3e44]:
+            - button [active] [ref=f3e46] [cursor=pointer]
+            - button [ref=f3e51] [cursor=pointer]
+            - button "notifications" [ref=f3e61] [cursor=pointer]
+            - button [ref=f3e71] [cursor=pointer]
+            - button [ref=f3e78] [cursor=pointer]
+            - button "notifications" [ref=f3e86] [cursor=pointer]
+            - button [ref=f3e92] [cursor=pointer]
+            - button [ref=f3e97] [cursor=pointer]
+            - paragraph [ref=f3e102]: Welcome Back., Trainee
+    - generic [ref=f3e107]:
+      - button [ref=f3e112] [cursor=pointer]:
+        - generic [ref=f3e113]:
+          - heading "Search" [level=4] [ref=f3e119]
+          - 'heading "Total : 843" [level=4] [ref=f3e122]'
+      - generic [ref=f3e127]:
+        - generic [ref=f3e131]:
+          - generic: Filter by Code, Short Name, Name, or Product Type
+          - generic [ref=f3e132]:
+            - textbox [ref=f3e133]
+            - button [ref=f3e134] [cursor=pointer]
+            - group
+        - table [ref=f3e140]:
+          - rowgroup [ref=f3e141]:
+            - row [ref=f3e142]:
+              - columnheader "Action" [ref=f3e143]
+              - columnheader "Code" [ref=f3e144]
+              - columnheader "Short Name" [ref=f3e145]
+              - columnheader "Name" [ref=f3e146]
+              - columnheader "Category" [ref=f3e147]
+              - columnheader "Product Types" [ref=f3e148]
+              - columnheader "Enable" [ref=f3e149]
+              - columnheader "Description" [ref=f3e150]
+              - columnheader "Type" [ref=f3e151]
+              - columnheader "Last Updated Date" [ref=f3e152]
+              - columnheader "Last Updated By" [ref=f3e153]
+              - columnheader "Created Date" [ref=f3e154]
+              - columnheader "Created By" [ref=f3e155]
+          - rowgroup [ref=f3e156]:
+            - row [ref=f3e157]:
+              - cell [ref=f3e158]:
+                - generic [ref=f3e159]:
+                  - button [ref=f3e160] [cursor=pointer]
+                  - separator [ref=f3e166]
+                  - button [ref=f3e167] [cursor=pointer]
+              - cell "custom field" [ref=f3e175]
+              - cell "-" [ref=f3e177]
+              - cell "custom field" [ref=f3e178]
+              - cell "Box" [ref=f3e179]
+              - cell "EED" [ref=f3e180]
+              - cell "Yes" [ref=f3e181]
+              - cell "-" [ref=f3e182]
+              - cell "-" [ref=f3e183]
+              - cell "30/09/2026 16:44" [ref=f3e184]
+              - cell "thuwanon.d" [ref=f3e185]
+              - cell "30/09/2026 16:44" [ref=f3e186]
+              - cell "thuwanon.d" [ref=f3e187]
+            - row [ref=f3e188]:
+              - cell [ref=f3e189]:
+                - generic [ref=f3e190]:
+                  - button [ref=f3e191] [cursor=pointer]
+                  - separator [ref=f3e197]
+                  - button [ref=f3e198] [cursor=pointer]
+              - cell "TSL2" [ref=f3e206]
+              - cell "-" [ref=f3e208]
+              - cell "TSL" [ref=f3e209]
+              - cell "Automotive Accessories" [ref=f3e210]
+              - cell "Local" [ref=f3e211]
+              - cell "Yes" [ref=f3e212]
+              - cell "-" [ref=f3e213]
+              - cell "-" [ref=f3e214]
+              - cell "01/10/2026 11:53" [ref=f3e215]
+              - cell "thuwanon.d" [ref=f3e216]
+              - cell "01/10/2026 11:53" [ref=f3e217]
+              - cell "thuwanon.d" [ref=f3e218]
+            - row [ref=f3e219]:
+              - cell [ref=f3e220]:
+                - generic [ref=f3e221]:
+                  - button [ref=f3e222] [cursor=pointer]
+                  - separator [ref=f3e228]
+                  - button [ref=f3e229] [cursor=pointer]
+              - cell "111" [ref=f3e237]
+              - cell "-" [ref=f3e239]
+              - cell "111" [ref=f3e240]
+              - cell "7-Eleven" [ref=f3e241]
+              - cell "-" [ref=f3e242]
+              - cell "Yes" [ref=f3e243]
+              - cell "-" [ref=f3e244]
+              - cell "-" [ref=f3e245]
+              - cell "27/10/2026 08:39" [ref=f3e246]
+              - cell "trainee03" [ref=f3e247]
+              - cell "27/10/2026 08:39" [ref=f3e248]
+              - cell "trainee03" [ref=f3e249]
+            - row [ref=f3e250]:
+              - cell [ref=f3e251]:
+                - generic [ref=f3e252]:
+                  - button [ref=f3e253] [cursor=pointer]
+                  - separator [ref=f3e259]
+                  - button [ref=f3e260] [cursor=pointer]
+              - cell "282174031RSV" [ref=f3e268]
+              - cell "282174031RSV" [ref=f3e270]
+              - cell "282174031RSV" [ref=f3e271]
+              - cell "OTWD" [ref=f3e272]
+              - cell "-" [ref=f3e273]
+              - cell "Yes" [ref=f3e274]
+              - cell "-" [ref=f3e275]
+              - cell "-" [ref=f3e276]
+              - cell "05/08/2026 16:31" [ref=f3e277]
+              - cell "chisanupong.p" [ref=f3e278]
+              - cell "09/05/2023 09:31" [ref=f3e279]
+              - cell "napat" [ref=f3e280]
+            - row [ref=f3e281]:
+              - cell [ref=f3e282]:
+                - generic [ref=f3e283]:
+                  - button [ref=f3e284] [cursor=pointer]
+                  - separator [ref=f3e290]
+                  - button [ref=f3e291] [cursor=pointer]
+              - cell "282174031RSV-2" [ref=f3e299]
+              - cell "282174031RSV" [ref=f3e301]
+              - cell "282174031RSV" [ref=f3e302]
+              - cell "OTWD" [ref=f3e303]
+              - cell "-" [ref=f3e304]
+              - cell "Yes" [ref=f3e305]
+              - cell "-" [ref=f3e306]
+              - cell "-" [ref=f3e307]
+              - cell "05/08/2026 16:32" [ref=f3e308]
+              - cell "chisanupong.p" [ref=f3e309]
+              - cell "05/08/2026 16:32" [ref=f3e310]
+              - cell "chisanupong.p" [ref=f3e311]
+            - row [ref=f3e312]:
+              - cell [ref=f3e313]:
+                - generic [ref=f3e314]:
+                  - button [ref=f3e315] [cursor=pointer]
+                  - separator [ref=f3e321]
+                  - button [ref=f3e322] [cursor=pointer]
+              - cell "284381A61DJA" [ref=f3e330]
+              - cell "-" [ref=f3e332]
+              - cell "284381A61DJA" [ref=f3e333]
+              - cell "OTWD" [ref=f3e334]
+              - cell "-" [ref=f3e335]
+              - cell "Yes" [ref=f3e336]
+              - cell "-" [ref=f3e337]
+              - cell "-" [ref=f3e338]
+              - cell "11/06/2026 08:57" [ref=f3e339]
+              - cell "Trainee03" [ref=f3e340]
+              - cell "09/05/2023 09:31" [ref=f3e341]
+              - cell "napat" [ref=f3e342]
+            - row [ref=f3e343]:
+              - cell [ref=f3e344]:
+                - generic [ref=f3e345]:
+                  - button [ref=f3e346] [cursor=pointer]
+                  - separator [ref=f3e352]
+                  - button [ref=f3e353] [cursor=pointer]
+              - cell "284383TA4CJA" [ref=f3e361]
+              - cell "-" [ref=f3e363]
+              - cell "284383TA4CJA" [ref=f3e364]
+              - cell "OTWD" [ref=f3e365]
+              - cell "-" [ref=f3e366]
+              - cell "Yes" [ref=f3e367]
+              - cell "-" [ref=f3e368]
+              - cell "-" [ref=f3e369]
+              - cell "11/06/2026 08:57" [ref=f3e370]
+              - cell "Trainee03" [ref=f3e371]
+              - cell "09/05/2023 09:31" [ref=f3e372]
+              - cell "napat" [ref=f3e373]
+            - row [ref=f3e374]:
+              - cell [ref=f3e375]:
+                - generic [ref=f3e376]:
+                  - button [ref=f3e377] [cursor=pointer]
+                  - separator [ref=f3e383]
+                  - button [ref=f3e384] [cursor=pointer]
+              - cell "284384BA5CJA" [ref=f3e392]
+              - cell "-" [ref=f3e394]
+              - cell "284384BA5CJA" [ref=f3e395]
+              - cell "OTWD" [ref=f3e396]
+              - cell "-" [ref=f3e397]
+              - cell "Yes" [ref=f3e398]
+              - cell "-" [ref=f3e399]
+              - cell "-" [ref=f3e400]
+              - cell "11/06/2026 08:57" [ref=f3e401]
+              - cell "Trainee03" [ref=f3e402]
+              - cell "09/05/2023 09:30" [ref=f3e403]
+              - cell "napat" [ref=f3e404]
+            - row [ref=f3e405]:
+              - cell [ref=f3e406]:
+                - generic [ref=f3e407]:
+                  - button [ref=f3e408] [cursor=pointer]
+                  - separator [ref=f3e414]
+                  - button [ref=f3e415] [cursor=pointer]
+              - cell "284385ZA0BJA" [ref=f3e423]
+              - cell "-" [ref=f3e425]
+              - cell "284385ZA0BJA" [ref=f3e426]
+              - cell "OTWD" [ref=f3e427]
+              - cell "-" [ref=f3e428]
+              - cell "Yes" [ref=f3e429]
+              - cell "-" [ref=f3e430]
+              - cell "-" [ref=f3e431]
+              - cell "11/06/2026 08:57" [ref=f3e432]
+              - cell "Trainee03" [ref=f3e433]
+              - cell "09/05/2023 09:31" [ref=f3e434]
+              - cell "napat" [ref=f3e435]
+            - row [ref=f3e436]:
+              - cell [ref=f3e437]:
+                - generic [ref=f3e438]:
+                  - button [ref=f3e439] [cursor=pointer]
+                  - separator [ref=f3e445]
+                  - button [ref=f3e446] [cursor=pointer]
+              - cell "284385ZA2BJB" [ref=f3e454]
+              - cell "-" [ref=f3e456]
+              - cell "284385ZA2BJB" [ref=f3e457]
+              - cell "OTWD" [ref=f3e458]
+              - cell "-" [ref=f3e459]
+              - cell "Yes" [ref=f3e460]
+              - cell "-" [ref=f3e461]
+              - cell "-" [ref=f3e462]
+              - cell "11/06/2026 08:57" [ref=f3e463]
+              - cell "Trainee03" [ref=f3e464]
+              - cell "09/05/2023 09:31" [ref=f3e465]
+              - cell "napat" [ref=f3e466]
+            - row [ref=f3e467]:
+              - cell [ref=f3e468]:
+                - generic [ref=f3e469]:
+                  - button [ref=f3e470] [cursor=pointer]
+                  - separator [ref=f3e476]
+                  - button [ref=f3e477] [cursor=pointer]
+              - cell "284385ZA6BJB" [ref=f3e485]
+              - cell "-" [ref=f3e487]
+              - cell "284385ZA6BJB" [ref=f3e488]
+              - cell "OTWD" [ref=f3e489]
+              - cell "-" [ref=f3e490]
+              - cell "Yes" [ref=f3e491]
+              - cell "-" [ref=f3e492]
+              - cell "-" [ref=f3e493]
+              - cell "11/06/2026 08:57" [ref=f3e494]
+              - cell "Trainee03" [ref=f3e495]
+              - cell "09/05/2023 09:33" [ref=f3e496]
+              - cell "napat" [ref=f3e497]
+            - row [ref=f3e498]:
+              - cell [ref=f3e499]:
+                - generic [ref=f3e500]:
+                  - button [ref=f3e501] [cursor=pointer]
+                  - separator [ref=f3e507]
+                  - button [ref=f3e508] [cursor=pointer]
+              - cell "284386GW0DJA" [ref=f3e516]
+              - cell "-" [ref=f3e518]
+              - cell "284386GW0DJA" [ref=f3e519]
+              - cell "OTWD" [ref=f3e520]
+              - cell "-" [ref=f3e521]
+              - cell "Yes" [ref=f3e522]
+              - cell "-" [ref=f3e523]
+              - cell "-" [ref=f3e524]
+              - cell "11/06/2026 08:57" [ref=f3e525]
+              - cell "Trainee03" [ref=f3e526]
+              - cell "09/05/2023 09:30" [ref=f3e527]
+              - cell "napat" [ref=f3e528]
+            - row [ref=f3e529]:
+              - cell [ref=f3e530]:
+                - generic [ref=f3e531]:
+                  - button [ref=f3e532] [cursor=pointer]
+                  - separator [ref=f3e538]
+                  - button [ref=f3e539] [cursor=pointer]
+              - cell "284386JE0AJA" [ref=f3e547]
+              - cell "-" [ref=f3e549]
+              - cell "284386JE0AJA" [ref=f3e550]
+              - cell "OTWD" [ref=f3e551]
+              - cell "-" [ref=f3e552]
+              - cell "Yes" [ref=f3e553]
+              - cell "-" [ref=f3e554]
+              - cell "-" [ref=f3e555]
+              - cell "11/06/2026 08:57" [ref=f3e556]
+              - cell "Trainee03" [ref=f3e557]
+              - cell "09/05/2023 09:30" [ref=f3e558]
+              - cell "napat" [ref=f3e559]
+            - row [ref=f3e560]:
+              - cell [ref=f3e561]:
+                - generic [ref=f3e562]:
+                  - button [ref=f3e563] [cursor=pointer]
+                  - separator [ref=f3e569]
+                  - button [ref=f3e570] [cursor=pointer]
+              - cell "284A15EK0BN0" [ref=f3e578]
+              - cell "-" [ref=f3e580]
+              - cell "284A15EK0BN0" [ref=f3e581]
+              - cell "OTWD" [ref=f3e582]
+              - cell "-" [ref=f3e583]
+              - cell "Yes" [ref=f3e584]
+              - cell "-" [ref=f3e585]
+              - cell "-" [ref=f3e586]
+              - cell "11/06/2026 08:57" [ref=f3e587]
+              - cell "Trainee03" [ref=f3e588]
+              - cell "09/05/2023 09:30" [ref=f3e589]
+              - cell "napat" [ref=f3e590]
+            - row [ref=f3e591]:
+              - cell [ref=f3e592]:
+                - generic [ref=f3e593]:
+                  - button [ref=f3e594] [cursor=pointer]
+                  - separator [ref=f3e600]
+                  - button [ref=f3e601] [cursor=pointer]
+              - cell "284A15R00AQL" [ref=f3e609]
+              - cell "-" [ref=f3e611]
+              - cell "284A15R00AQL" [ref=f3e612]
+              - cell "OTWD" [ref=f3e613]
+              - cell "-" [ref=f3e614]
+              - cell "Yes" [ref=f3e615]
+              - cell "-" [ref=f3e616]
+              - cell "-" [ref=f3e617]
+              - cell "11/06/2026 08:57" [ref=f3e618]
+              - cell "Trainee03" [ref=f3e619]
+              - cell "09/05/2023 09:34" [ref=f3e620]
+              - cell "napat" [ref=f3e621]
+            - row [ref=f3e622]:
+              - cell [ref=f3e623]:
+                - generic [ref=f3e624]:
+                  - button [ref=f3e625] [cursor=pointer]
+                  - separator [ref=f3e631]
+                  - button [ref=f3e632] [cursor=pointer]
+              - cell "284A16VA0ASV" [ref=f3e640]
+              - cell "-" [ref=f3e642]
+              - cell "284A16VA0ASV" [ref=f3e643]
+              - cell "OTWD" [ref=f3e644]
+              - cell "-" [ref=f3e645]
+              - cell "Yes" [ref=f3e646]
+              - cell "-" [ref=f3e647]
+              - cell "-" [ref=f3e648]
+              - cell "11/06/2026 08:57" [ref=f3e649]
+              - cell "Trainee03" [ref=f3e650]
+              - cell "09/05/2023 09:34" [ref=f3e651]
+              - cell "napat" [ref=f3e652]
+            - row [ref=f3e653]:
+              - cell [ref=f3e654]:
+                - generic [ref=f3e655]:
+                  - button [ref=f3e656] [cursor=pointer]
+                  - separator [ref=f3e662]
+                  - button [ref=f3e663] [cursor=pointer]
+              - cell "284B64JA1BC1" [ref=f3e671]
+              - cell "-" [ref=f3e673]
+              - cell "284B64JA1BC1" [ref=f3e674]
+              - cell "OTWD" [ref=f3e675]
+              - cell "-" [ref=f3e676]
+              - cell "Yes" [ref=f3e677]
+              - cell "-" [ref=f3e678]
+              - cell "-" [ref=f3e679]
+              - cell "11/06/2026 08:57" [ref=f3e680]
+              - cell "Trainee03" [ref=f3e681]
+              - cell "09/05/2023 09:31" [ref=f3e682]
+              - cell "napat" [ref=f3e683]
+            - row [ref=f3e684]:
+              - cell [ref=f3e685]:
+                - generic [ref=f3e686]:
+                  - button [ref=f3e687] [cursor=pointer]
+                  - separator [ref=f3e693]
+                  - button [ref=f3e694] [cursor=pointer]
+              - cell "284B64JW1BSH" [ref=f3e702]
+              - cell "-" [ref=f3e704]
+              - cell "284B64JW1BSH" [ref=f3e705]
+              - cell "OTWD" [ref=f3e706]
+              - cell "-" [ref=f3e707]
+              - cell "Yes" [ref=f3e708]
+              - cell "-" [ref=f3e709]
+              - cell "-" [ref=f3e710]
+              - cell "11/06/2026 08:57" [ref=f3e711]
+              - cell "Trainee03" [ref=f3e712]
+              - cell "09/05/2023 09:31" [ref=f3e713]
+              - cell "napat" [ref=f3e714]
+            - row [ref=f3e715]:
+              - cell [ref=f3e716]:
+                - generic [ref=f3e717]:
+                  - button [ref=f3e718] [cursor=pointer]
+                  - separator [ref=f3e724]
+                  - button [ref=f3e725] [cursor=pointer]
+              - cell "284B64JW2BC1" [ref=f3e733]
+              - cell "-" [ref=f3e735]
+              - cell "284B64JW2BC1" [ref=f3e736]
+              - cell "OTWD" [ref=f3e737]
+              - cell "-" [ref=f3e738]
+              - cell "Yes" [ref=f3e739]
+              - cell "-" [ref=f3e740]
+              - cell "-" [ref=f3e741]
+              - cell "11/06/2026 08:57" [ref=f3e742]
+              - cell "Trainee03" [ref=f3e743]
+              - cell "09/05/2023 09:33" [ref=f3e744]
+              - cell "napat" [ref=f3e745]
+            - row [ref=f3e746]:
+              - cell [ref=f3e747]:
+                - generic [ref=f3e748]:
+                  - button [ref=f3e749] [cursor=pointer]
+                  - separator [ref=f3e755]
+                  - button [ref=f3e756] [cursor=pointer]
+              - cell "284B64JW2BSH" [ref=f3e764]
+              - cell "-" [ref=f3e766]
+              - cell "284B64JW2BSH" [ref=f3e767]
+              - cell "OTWD" [ref=f3e768]
+              - cell "-" [ref=f3e769]
+              - cell "Yes" [ref=f3e770]
+              - cell "-" [ref=f3e771]
+              - cell "-" [ref=f3e772]
+              - cell "11/06/2026 08:57" [ref=f3e773]
+              - cell "Trainee03" [ref=f3e774]
+              - cell "09/05/2023 09:30" [ref=f3e775]
+              - cell "napat" [ref=f3e776]
+            - row [ref=f3e777]:
+              - cell [ref=f3e778]:
+                - generic [ref=f3e779]:
+                  - button [ref=f3e780] [cursor=pointer]
+                  - separator [ref=f3e786]
+                  - button [ref=f3e787] [cursor=pointer]
+              - cell "284B74JA1BSB" [ref=f3e795]
+              - cell "-" [ref=f3e797]
+              - cell "284B74JA1BSB" [ref=f3e798]
+              - cell "OTWD" [ref=f3e799]
+              - cell "-" [ref=f3e800]
+              - cell "Yes" [ref=f3e801]
+              - cell "-" [ref=f3e802]
+              - cell "-" [ref=f3e803]
+              - cell "11/06/2026 08:57" [ref=f3e804]
+              - cell "Trainee03" [ref=f3e805]
+              - cell "09/05/2023 09:31" [ref=f3e806]
+              - cell "napat" [ref=f3e807]
+            - row [ref=f3e808]:
+              - cell [ref=f3e809]:
+                - generic [ref=f3e810]:
+                  - button [ref=f3e811] [cursor=pointer]
+                  - separator [ref=f3e817]
+                  - button [ref=f3e818] [cursor=pointer]
+              - cell "284B74JW2BSB" [ref=f3e826]
+              - cell "-" [ref=f3e828]
+              - cell "284B74JW2BSB" [ref=f3e829]
+              - cell "OTWD" [ref=f3e830]
+              - cell "-" [ref=f3e831]
+              - cell "Yes" [ref=f3e832]
+              - cell "-" [ref=f3e833]
+              - cell "-" [ref=f3e834]
+              - cell "11/06/2026 08:57" [ref=f3e835]
+              - cell "Trainee03" [ref=f3e836]
+              - cell "09/05/2023 09:31" [ref=f3e837]
+              - cell "napat" [ref=f3e838]
+            - row [ref=f3e839]:
+              - cell [ref=f3e840]:
+                - generic [ref=f3e841]:
+                  - button [ref=f3e842] [cursor=pointer]
+                  - separator [ref=f3e848]
+                  - button [ref=f3e849] [cursor=pointer]
+              - cell "284B76XJ1AJA" [ref=f3e857]
+              - cell "-" [ref=f3e859]
+              - cell "284B76XJ1AJA" [ref=f3e860]
+              - cell "OTWD" [ref=f3e861]
+              - cell "-" [ref=f3e862]
+              - cell "Yes" [ref=f3e863]
+              - cell "-" [ref=f3e864]
+              - cell "-" [ref=f3e865]
+              - cell "11/06/2026 08:57" [ref=f3e866]
+              - cell "Trainee03" [ref=f3e867]
+              - cell "09/05/2023 09:31" [ref=f3e868]
+              - cell "napat" [ref=f3e869]
+            - row [ref=f3e870]:
+              - cell [ref=f3e871]:
+                - generic [ref=f3e872]:
+                  - button [ref=f3e873] [cursor=pointer]
+                  - separator [ref=f3e879]
+                  - button [ref=f3e880] [cursor=pointer]
+              - cell "284B89ER0AW0" [ref=f3e888]
+              - cell "-" [ref=f3e890]
+              - cell "284B89ER0AW0" [ref=f3e891]
+              - cell "OTWD" [ref=f3e892]
+              - cell "-" [ref=f3e893]
+              - cell "Yes" [ref=f3e894]
+              - cell "-" [ref=f3e895]
+              - cell "-" [ref=f3e896]
+              - cell "11/06/2026 08:57" [ref=f3e897]
+              - cell "Trainee03" [ref=f3e898]
+              - cell "09/05/2023 09:33" [ref=f3e899]
+              - cell "napat" [ref=f3e900]
+            - row [ref=f3e901]:
+              - cell [ref=f3e902]:
+                - generic [ref=f3e903]:
+                  - button [ref=f3e904] [cursor=pointer]
+                  - separator [ref=f3e910]
+                  - button [ref=f3e911] [cursor=pointer]
+              - cell "284B94JA0BRF" [ref=f3e919]
+              - cell "-" [ref=f3e921]
+              - cell "284B94JA0BRF" [ref=f3e922]
+              - cell "OTWD" [ref=f3e923]
+              - cell "-" [ref=f3e924]
+              - cell "Yes" [ref=f3e925]
+              - cell "-" [ref=f3e926]
+              - cell "-" [ref=f3e927]
+              - cell "11/06/2026 08:57" [ref=f3e928]
+              - cell "Trainee03" [ref=f3e929]
+              - cell "09/05/2023 09:31" [ref=f3e930]
+              - cell "napat" [ref=f3e931]
+        - generic [ref=f3e933]:
+          - navigation "pagination navigation" [ref=f3e935]:
+            - list [ref=f3e936]:
+              - listitem [ref=f3e937]:
+                - button "Go to first page" [disabled]
+              - listitem [ref=f3e938]:
+                - button "Go to previous page" [disabled]
+              - listitem [ref=f3e939]:
+                - button "page 1" [ref=f3e940] [cursor=pointer]: "1"
+              - listitem [ref=f3e941]:
+                - button "Go to page 2" [ref=f3e942] [cursor=pointer]: "2"
+              - listitem [ref=f3e943]:
+                - button "Go to page 3" [ref=f3e944] [cursor=pointer]: "3"
+              - listitem [ref=f3e945]:
+                - button "Go to page 4" [ref=f3e946] [cursor=pointer]: "4"
+              - listitem [ref=f3e947]:
+                - button "Go to page 5" [ref=f3e948] [cursor=pointer]: "5"
+              - listitem [ref=f3e949]:
+                - button "Go to page 6" [ref=f3e950] [cursor=pointer]: "6"
+              - listitem [ref=f3e951]:
+                - button "Go to page 7" [ref=f3e952] [cursor=pointer]: "7"
+              - listitem [ref=f3e953]:
+                - generic [ref=f3e954]: …
+              - listitem [ref=f3e955]:
+                - button "Go to page 34" [ref=f3e956] [cursor=pointer]: "34"
+              - listitem [ref=f3e957]:
+                - button "Go to next page" [ref=f3e958] [cursor=pointer]
+              - listitem [ref=f3e961]:
+                - button "Go to last page" [ref=f3e962] [cursor=pointer]
+          - generic [ref=f3e966]:
+            - combobox [ref=f3e967] [cursor=pointer]:
+              - option "25" [selected]
+              - option "50"
+              - option "100"
+            - group
+          - heading "1 - 25 of 843 items" [level=5] [ref=f3e971]
+  - status [ref=f3e973]
+```

@@ -1,0 +1,7 @@
+[Add Modal Mode] Custom POI (Public)
+[Add Modal Mode] Custom POI (Shared)
+[Search Mode] Custom Areas
+[Search Mode] Custom Routes
+[Add Modal Mode] Products
+[Search Mode] Users
+[Success] กดปุ่ม Save สำหรับ Business Unit: "RTs3" เรียบร้อยแล้ว

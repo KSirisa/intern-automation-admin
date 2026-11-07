@@ -1,0 +1,277 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\Admin-Module\TC009-Configurations\Alert\01-create-alert.spec.ts >> alert configurations test
+- Location: tests\Admin-Module\TC009-Configurations\Alert\01-create-alert.spec.ts:725:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic [ref=e1]:
+      - generic [ref=e3]:
+        - navigation [ref=e4]:
+          - button [expanded] [ref=e5]:
+            - img [ref=e6]:
+              - generic "background" [ref=e7]
+        - generic "Switch Task" [ref=e28] [cursor=pointer]
+        - generic [ref=e34]:
+          - generic [ref=e35]: Alert Configurations
+          - generic [ref=e39]: Create Alert Configuration
+        - link "Workspace Mode" [ref=e46] [cursor=pointer]:
+          - /url: /
+        - link "Hello, trainee03 UAT Corporation" [ref=e58] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e60]:
+            - generic [ref=e61]: Hello, trainee03
+            - generic [ref=e62]: UAT Corporation
+      - generic [ref=e63]:
+        - navigation [ref=e65]:
+          - button "Show Menu" [ref=e66] [cursor=pointer]
+          - list [ref=e70]:
+            - listitem [ref=e71] [cursor=pointer]:
+              - generic "Business Unit" [ref=e72]
+            - listitem [ref=e76] [cursor=pointer]:
+              - generic "Groups" [ref=e77]
+            - listitem [ref=e86] [cursor=pointer]:
+              - generic "Users" [ref=e87]
+            - listitem [ref=e92] [cursor=pointer]:
+              - generic "Assets" [ref=e93]
+            - listitem [ref=e100] [cursor=pointer]:
+              - generic "Maintenance" [ref=e101]
+            - listitem [ref=e109] [cursor=pointer]:
+              - generic "Driver Checklist" [ref=e110]
+            - listitem [ref=e117] [cursor=pointer]:
+              - generic "Driver Performance Rules" [ref=e118]
+            - listitem [ref=e122] [cursor=pointer]:
+              - generic "Reports" [ref=e123]
+            - listitem [ref=e130] [cursor=pointer]:
+              - generic "Configurations" [ref=e131]
+            - listitem [ref=e137] [cursor=pointer]:
+              - generic "Cash Van" [ref=e138]
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e153]:
+                - generic:
+                  - heading "Alert Configurations" [level=2] [ref=e154]
+                  - heading [level=3]
+              - generic [ref=e155]:
+                - button "Alert Configurations" [ref=e158] [cursor=pointer]
+                - button "Minimize" [ref=e161] [cursor=pointer]
+                - button "Maximize" [ref=e166] [cursor=pointer]
+                - button "Close" [ref=e171] [cursor=pointer]
+              - list [ref=e179]:
+                - listitem [ref=e180]:
+                  - generic "Create" [ref=e181] [cursor=pointer]
+                - listitem [ref=e186]:
+                  - generic "Search" [ref=e187] [cursor=pointer]
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - generic [ref=e206]:
+                    - textbox [ref=e208]:
+                      - /placeholder: Filter by Description
+                      - text: Wide Turn
+                    - generic "Clear" [ref=e209] [cursor=pointer]
+                  - generic [ref=e215]:
+                    - generic [ref=e216]: "20"
+                    - combobox [ref=e217] [cursor=pointer]:
+                      - option "20" [selected]
+                      - option "50"
+                      - option "100"
+                      - option "All"
+                  - generic [ref=e218]: 3 of 130
+                - generic [ref=e219]:
+                  - grid [ref=e222]:
+                    - rowgroup [ref=e223]:
+                      - row [ref=e224]:
+                        - 'columnheader "Alert Type: activate to sort column ascending" [ref=e225] [cursor=pointer]': Alert Type 
+                        - 'columnheader "Description: activate to sort column ascending" [ref=e226] [cursor=pointer]': Description 
+                        - 'columnheader "Website: activate to sort column ascending" [ref=e227] [cursor=pointer]': Website 
+                        - 'columnheader "Email: activate to sort column ascending" [ref=e228] [cursor=pointer]': Email 
+                        - 'columnheader "SMS: activate to sort column ascending" [ref=e229] [cursor=pointer]': SMS 
+                        - 'columnheader "Ticket: activate to sort column ascending" [ref=e230] [cursor=pointer]': Ticket 
+                        - 'columnheader "MDVR: activate to sort column ascending" [ref=e231] [cursor=pointer]': MDVR 
+                        - 'columnheader "Report: activate to sort column ascending" [ref=e232] [cursor=pointer]': Report 
+                        - 'columnheader "Line: activate to sort column ascending" [ref=e233] [cursor=pointer]': Line 
+                        - 'columnheader "Mobile: activate to sort column ascending" [ref=e234] [cursor=pointer]': Mobile 
+                        - 'columnheader "Priority: activate to sort column ascending" [ref=e235] [cursor=pointer]': Priority 
+                        - 'columnheader "Enable: activate to sort column ascending" [ref=e236] [cursor=pointer]': Enable 
+                  - grid [ref=e238]:
+                    - rowgroup [ref=e239]:
+                      - row [ref=e240]:
+                        - gridcell "Wide Turn" [ref=e241]
+                        - gridcell "Wide turn left/right" [ref=e242]
+                        - gridcell "Yes" [ref=e243]
+                        - gridcell "No" [ref=e244]
+                        - gridcell "No" [ref=e245]
+                        - gridcell "Yes" [ref=e246]
+                        - gridcell "No" [ref=e247]
+                        - gridcell "Yes" [ref=e248]
+                        - gridcell "No" [ref=e249]
+                        - gridcell "No" [ref=e250]
+                        - gridcell "1" [ref=e251]
+                        - gridcell "Yes" [ref=e252]
+                      - row [ref=e253]:
+                        - gridcell "Wide Turn" [ref=e254]
+                        - gridcell "Automate" [ref=e255]
+                        - gridcell "No" [ref=e256]
+                        - gridcell "No" [ref=e257]
+                        - gridcell "No" [ref=e258]
+                        - gridcell "Yes" [ref=e259]
+                        - gridcell "Yes" [ref=e260]
+                        - gridcell "No" [ref=e261]
+                        - gridcell "No" [ref=e262]
+                        - gridcell "No" [ref=e263]
+                        - gridcell "111" [ref=e264]
+                        - gridcell "Yes" [ref=e265]
+                      - row [ref=e266]:
+                        - gridcell "Wide Turn" [ref=e267]
+                        - gridcell "Wide Left Turn" [ref=e268]
+                        - gridcell "Yes" [ref=e269]
+                        - gridcell "No" [ref=e270]
+                        - gridcell "No" [ref=e271]
+                        - gridcell "Yes" [ref=e272]
+                        - gridcell "No" [ref=e273]
+                        - gridcell "Yes" [ref=e274]
+                        - gridcell "No" [ref=e275]
+                        - gridcell "No" [ref=e276]
+                        - gridcell "1" [ref=e277]
+                        - gridcell "Yes" [ref=e278]
+              - button "Load more" [ref=e280] [cursor=pointer]
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e286]:
+                - generic:
+                  - heading "Create Alert Configuration" [level=2] [ref=e287]
+                  - heading [level=3]
+              - generic [ref=e288]:
+                - button "Create Alert Configuration" [ref=e291] [cursor=pointer]
+                - button "Minimize" [ref=e294] [cursor=pointer]
+                - button "Maximize" [ref=e299] [cursor=pointer]
+                - button "Close" [ref=e304] [cursor=pointer]
+            - generic [ref=e311]:
+              - generic "There is an existing alert with the same condition in the company." [ref=e313]:
+                - generic [ref=e314]:
+                  - generic [ref=e319]: There is an existing alert with the same condition in the company.
+                  - generic [ref=e320] [cursor=pointer]
+              - generic [ref=e327]:
+                - generic [ref=e328]: Type
+                - generic [ref=e336]:
+                  - combobox [ref=e337] [cursor=pointer]
+                  - combobox [ref=e340] [cursor=pointer]:
+                    - textbox "Wide Turn" [ref=e341]
+                - generic [ref=e346] [cursor=pointer]:
+                  - text: Alert when work under shipment only.
+                  - checkbox "Alert when work under shipment only." [checked]
+                - generic [ref=e351]: Direction
+                - generic [ref=e356]:
+                  - generic [ref=e357]: Both
+                  - combobox "Direction" [ref=e358] [cursor=pointer]:
+                    - option "Both" [selected]
+                    - option "Turn Right"
+                    - option "Turn Left"
+                - generic [ref=e359]: Maneuver Level
+                - generic [ref=e364]:
+                  - combobox [ref=e365] [cursor=pointer]
+                  - combobox [ref=e368] [cursor=pointer]:
+                    - textbox "Aggressive And Above" [ref=e369]
+                - generic [ref=e370]: Minimum Duration(second)
+                - textbox "Minimum Duration(second)" [ref=e377]: "5"
+                - generic [ref=e378]:
+                  - generic [ref=e379]: Alert Categories
+                  - generic [ref=e384]:
+                    - combobox [ref=e385] [cursor=pointer]
+                    - combobox [ref=e388] [cursor=pointer]:
+                      - textbox "My Business" [ref=e389]
+                - generic [ref=e390]: Priority
+                - textbox "Priority" [ref=e397]: "111"
+                - generic [ref=e398]: Enable
+                - generic [ref=e406]:
+                  - generic [ref=e407]: "Yes"
+                  - combobox "Enable" [ref=e408] [cursor=pointer]:
+                    - option
+                    - option "Yes" [selected]
+                    - option "No"
+                - generic [ref=e409]: Mail To
+                - generic [ref=e411] [cursor=pointer]
+                - textbox [ref=e416]: someone@example.com
+                - generic [ref=e420] [cursor=pointer]:
+                  - text: Auto Generate Ticket
+                  - checkbox "Auto Generate Ticket" [checked]
+                - generic [ref=e428] [cursor=pointer]:
+                  - text: MDVR
+                  - checkbox "MDVR" [checked]
+                - generic [ref=e436] [cursor=pointer]:
+                  - text: Remove Default Driver
+                  - checkbox "Remove Default Driver" [checked]
+                - generic [ref=e444] [cursor=pointer]:
+                  - text: Use Driver's Business Unit
+                  - checkbox "Use Driver's Business Unit" [checked]
+                - generic [ref=e449]: Alert Via
+                - generic [ref=e454] [cursor=pointer]:
+                  - text: Website
+                  - checkbox "Website"
+                - generic [ref=e459] [cursor=pointer]:
+                  - text: Email
+                  - checkbox "Email"
+                - generic [ref=e464] [cursor=pointer]:
+                  - text: SMS
+                  - checkbox "SMS"
+                - generic [ref=e469] [cursor=pointer]:
+                  - text: Interface
+                  - checkbox "Interface"
+                - generic [ref=e474] [cursor=pointer]:
+                  - text: Device
+                  - checkbox "Device"
+                - generic [ref=e479] [cursor=pointer]:
+                  - text: Report
+                  - checkbox "Report"
+                - generic [ref=e484] [cursor=pointer]:
+                  - text: Line
+                  - checkbox "Line"
+                - generic [ref=e489] [cursor=pointer]:
+                  - text: Mobile
+                  - checkbox "Mobile"
+                - generic [ref=e491]: Description
+                - textbox "Description" [ref=e498]: Automate
+                - list [ref=e500]:
+                  - listitem [ref=e501]:
+                    - link "Area Setting" [ref=e504] [cursor=pointer]:
+                      - /url: "#"
+                - list [ref=e509]:
+                  - listitem [ref=e510]:
+                    - link "Date / Time Setting" [ref=e513] [cursor=pointer]:
+                      - /url: "#"
+                - list [ref=e518]:
+                  - listitem [ref=e519]:
+                    - link "Assets*" [ref=e522] [cursor=pointer]:
+                      - /url: "#"
+                - list [ref=e527]:
+                  - listitem [ref=e528]:
+                    - link "Permissions" [ref=e531] [cursor=pointer]:
+                      - /url: "#"
+              - generic [ref=e537]:
+                - button "Save" [ref=e539] [cursor=pointer]
+                - button "Cancel" [ref=e542] [cursor=pointer]
+    - generic [ref=e546]:
+      - heading [level=2] [ref=e547]
+      - generic [ref=e548]: Your unsaved changes will be discarded.
+      - generic [ref=e550]:
+        - generic [ref=e551] [cursor=pointer]: OK
+        - generic [ref=e553] [cursor=pointer]: Cancel
+  - status [ref=e555]
+```

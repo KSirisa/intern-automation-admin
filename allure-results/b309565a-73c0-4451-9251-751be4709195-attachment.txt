@@ -1,0 +1,2 @@
+[Skipped] ไม่สามารถทำ "Click "Button Delete Row"" ได้หลังจากพยายาม 3 ครั้ง
+[Skipped] ไม่สามารถทำ "Click "Button Cancel Delete"" ได้หลังจากพยายาม 3 ครั้ง

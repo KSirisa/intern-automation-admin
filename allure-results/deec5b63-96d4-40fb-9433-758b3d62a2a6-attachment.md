@@ -1,0 +1,788 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests_PostTest\TMS-Module\Product\02-product-cat.spec.ts >> Product Categories - CRUD Flow
+- Location: tests_PostTest\TMS-Module\Product\02-product-cat.spec.ts:14:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f3e2]:
+  - banner [ref=f3e5]:
+    - generic [ref=f3e6]:
+      - generic [ref=f3e7]:
+        - button "menu" [ref=f3e9] [cursor=pointer]
+        - separator [ref=f3e22]
+        - paragraph [ref=f3e24]: Product Categories
+      - generic [ref=f3e25]:
+        - button [ref=f3e30] [cursor=pointer]
+        - separator [ref=f3e36]
+        - generic [ref=f3e37]:
+          - button [ref=f3e39] [cursor=pointer]
+          - button [ref=f3e44] [cursor=pointer]
+          - button "notifications" [ref=f3e54] [cursor=pointer]
+          - button [ref=f3e64] [cursor=pointer]
+          - button [ref=f3e71] [cursor=pointer]
+          - button "notifications" [ref=f3e79] [cursor=pointer]
+          - button [ref=f3e85] [cursor=pointer]
+          - button [ref=f3e90] [cursor=pointer]
+          - paragraph [ref=f3e95]: Welcome Back., Trainee
+  - generic [ref=f3e100]:
+    - generic [ref=f3e103]:
+      - generic: Filter by Code or Name
+      - generic [ref=f3e104]:
+        - textbox [ref=f3e105]
+        - button [ref=f3e106] [cursor=pointer]
+        - group
+    - table [ref=f3e114]:
+      - rowgroup [ref=f3e115]:
+        - row [ref=f3e116]:
+          - columnheader "Action" [ref=f3e117]
+          - columnheader "Code" [ref=f3e118]
+          - columnheader "Name" [ref=f3e119]
+          - columnheader "Enable" [ref=f3e120]
+          - columnheader "Last Updated Date" [ref=f3e121]
+          - columnheader "Last Updated By" [ref=f3e122]
+          - columnheader "Created Date" [ref=f3e123]
+          - columnheader "Created By" [ref=f3e124]
+      - rowgroup [ref=f3e125]:
+        - row [ref=f3e126]:
+          - cell [ref=f3e127]:
+            - generic [ref=f3e128]:
+              - button [ref=f3e129] [cursor=pointer]
+              - separator [ref=f3e135]
+              - button [ref=f3e136] [cursor=pointer]
+          - cell "7-11" [ref=f3e144]
+          - cell "7-Eleven" [ref=f3e146]
+          - cell "Yes" [ref=f3e147]
+          - cell "26/05/2025 11:53" [ref=f3e148]
+          - cell "system" [ref=f3e149]
+          - cell "13/04/2020 15:40" [ref=f3e150]
+          - cell "system" [ref=f3e151]
+        - row [ref=f3e152]:
+          - cell [ref=f3e153]:
+            - generic [ref=f3e154]:
+              - button [ref=f3e155] [cursor=pointer]
+              - separator [ref=f3e161]
+              - button [ref=f3e162] [cursor=pointer]
+          - cell "AT000" [ref=f3e170]
+          - cell "ATest Product Categories" [ref=f3e172]
+          - cell "Yes" [ref=f3e173]
+          - cell "27/10/2026 08:08" [ref=f3e174]
+          - cell "trainee03" [ref=f3e175]
+          - cell "27/10/2026 08:08" [ref=f3e176]
+          - cell "trainee03" [ref=f3e177]
+        - row [ref=f3e178]:
+          - cell [ref=f3e179]:
+            - generic [ref=f3e180]:
+              - button [ref=f3e181] [cursor=pointer]
+              - separator [ref=f3e187]
+              - button [ref=f3e188] [cursor=pointer]
+          - cell "PD022" [ref=f3e196]
+          - cell "Automotive Accessories" [ref=f3e198]
+          - cell "Yes" [ref=f3e199]
+          - cell "01/10/2026 10:47" [ref=f3e200]
+          - cell "com1_sasiwan.c" [ref=f3e201]
+          - cell "01/10/2026 10:47" [ref=f3e202]
+          - cell "com1_sasiwan.c" [ref=f3e203]
+        - row [ref=f3e204]:
+          - cell [ref=f3e205]:
+            - generic [ref=f3e206]:
+              - button [ref=f3e207] [cursor=pointer]
+              - separator [ref=f3e213]
+              - button [ref=f3e214] [cursor=pointer]
+          - cell "PD026" [ref=f3e222]
+          - cell "Baby Products" [ref=f3e224]
+          - cell "Yes" [ref=f3e225]
+          - cell "01/10/2026 10:48" [ref=f3e226]
+          - cell "com1_sasiwan.c" [ref=f3e227]
+          - cell "01/10/2026 10:48" [ref=f3e228]
+          - cell "com1_sasiwan.c" [ref=f3e229]
+        - row [ref=f3e230]:
+          - cell [ref=f3e231]:
+            - generic [ref=f3e232]:
+              - button [ref=f3e233] [cursor=pointer]
+              - separator [ref=f3e239]
+              - button [ref=f3e240] [cursor=pointer]
+          - cell "PD011" [ref=f3e248]
+          - cell "Bags & Backpacks" [ref=f3e250]
+          - cell "Yes" [ref=f3e251]
+          - cell "01/10/2026 10:45" [ref=f3e252]
+          - cell "com1_sasiwan.c" [ref=f3e253]
+          - cell "01/10/2026 10:45" [ref=f3e254]
+          - cell "com1_sasiwan.c" [ref=f3e255]
+        - row [ref=f3e256]:
+          - cell [ref=f3e257]:
+            - generic [ref=f3e258]:
+              - button [ref=f3e259] [cursor=pointer]
+              - separator [ref=f3e265]
+              - button [ref=f3e266] [cursor=pointer]
+          - cell "PD013" [ref=f3e274]
+          - cell "Beauty & Personal Care" [ref=f3e276]
+          - cell "Yes" [ref=f3e277]
+          - cell "01/10/2026 10:45" [ref=f3e278]
+          - cell "com1_sasiwan.c" [ref=f3e279]
+          - cell "01/10/2026 10:45" [ref=f3e280]
+          - cell "com1_sasiwan.c" [ref=f3e281]
+        - row [ref=f3e282]:
+          - cell [ref=f3e283]:
+            - generic [ref=f3e284]:
+              - button [ref=f3e285] [cursor=pointer]
+              - separator [ref=f3e291]
+              - button [ref=f3e292] [cursor=pointer]
+          - cell "BIGC" [ref=f3e300]
+          - cell "BIG-C" [ref=f3e302]
+          - cell "Yes" [ref=f3e303]
+          - cell "26/05/2025 11:53" [ref=f3e304]
+          - cell "system" [ref=f3e305]
+          - cell "13/04/2020 15:40" [ref=f3e306]
+          - cell "system" [ref=f3e307]
+        - row [ref=f3e308]:
+          - cell [ref=f3e309]:
+            - generic [ref=f3e310]:
+              - button [ref=f3e311] [cursor=pointer]
+              - separator [ref=f3e317]
+              - button [ref=f3e318] [cursor=pointer]
+          - cell "PD017" [ref=f3e326]
+          - cell "Books & Stationery" [ref=f3e328]
+          - cell "Yes" [ref=f3e329]
+          - cell "01/10/2026 10:46" [ref=f3e330]
+          - cell "com1_sasiwan.c" [ref=f3e331]
+          - cell "01/10/2026 10:46" [ref=f3e332]
+          - cell "com1_sasiwan.c" [ref=f3e333]
+        - row [ref=f3e334]:
+          - cell [ref=f3e335]:
+            - generic [ref=f3e336]:
+              - button [ref=f3e337] [cursor=pointer]
+              - separator [ref=f3e343]
+              - button [ref=f3e344] [cursor=pointer]
+          - cell "Box" [ref=f3e352]
+          - cell "Box" [ref=f3e354]
+          - cell "Yes" [ref=f3e355]
+          - cell "22/05/2026 09:49" [ref=f3e356]
+          - cell "chisanupong.p" [ref=f3e357]
+          - cell "22/05/2026 09:49" [ref=f3e358]
+          - cell "chisanupong.p" [ref=f3e359]
+        - row [ref=f3e360]:
+          - cell [ref=f3e361]:
+            - generic [ref=f3e362]:
+              - button [ref=f3e363] [cursor=pointer]
+              - separator [ref=f3e369]
+              - button [ref=f3e370] [cursor=pointer]
+          - cell "PD025" [ref=f3e378]
+          - cell "Building Materials" [ref=f3e380]
+          - cell "Yes" [ref=f3e381]
+          - cell "01/10/2026 10:47" [ref=f3e382]
+          - cell "com1_sasiwan.c" [ref=f3e383]
+          - cell "01/10/2026 10:47" [ref=f3e384]
+          - cell "com1_sasiwan.c" [ref=f3e385]
+        - row [ref=f3e386]:
+          - cell [ref=f3e387]:
+            - generic [ref=f3e388]:
+              - button [ref=f3e389] [cursor=pointer]
+              - separator [ref=f3e395]
+              - button [ref=f3e396] [cursor=pointer]
+          - cell "PD009" [ref=f3e404]
+          - cell "Clothing" [ref=f3e406]
+          - cell "Yes" [ref=f3e407]
+          - cell "01/10/2026 10:44" [ref=f3e408]
+          - cell "com1_sasiwan.c" [ref=f3e409]
+          - cell "01/10/2026 10:44" [ref=f3e410]
+          - cell "com1_sasiwan.c" [ref=f3e411]
+        - row [ref=f3e412]:
+          - cell [ref=f3e413]:
+            - generic [ref=f3e414]:
+              - button [ref=f3e415] [cursor=pointer]
+              - separator [ref=f3e421]
+              - button [ref=f3e422] [cursor=pointer]
+          - cell "PD004" [ref=f3e430]
+          - cell "Computer Accessories" [ref=f3e432]
+          - cell "Yes" [ref=f3e433]
+          - cell "01/10/2026 10:43" [ref=f3e434]
+          - cell "com1_sasiwan.c" [ref=f3e435]
+          - cell "01/10/2026 10:43" [ref=f3e436]
+          - cell "com1_sasiwan.c" [ref=f3e437]
+        - row [ref=f3e438]:
+          - cell [ref=f3e439]:
+            - generic [ref=f3e440]:
+              - button [ref=f3e441] [cursor=pointer]
+              - separator [ref=f3e447]
+              - button [ref=f3e448] [cursor=pointer]
+          - cell "PD002" [ref=f3e456]
+          - cell "Computers & Laptops" [ref=f3e458]
+          - cell "Yes" [ref=f3e459]
+          - cell "01/10/2026 10:43" [ref=f3e460]
+          - cell "com1_sasiwan.c" [ref=f3e461]
+          - cell "01/10/2026 10:43" [ref=f3e462]
+          - cell "com1_sasiwan.c" [ref=f3e463]
+        - row [ref=f3e464]:
+          - cell [ref=f3e465]:
+            - generic [ref=f3e466]:
+              - button [ref=f3e467] [cursor=pointer]
+              - separator [ref=f3e473]
+              - button [ref=f3e474] [cursor=pointer]
+          - cell "construction" [ref=f3e482]
+          - cell "construction" [ref=f3e484]
+          - cell "Yes" [ref=f3e485]
+          - cell "22/04/2026 16:23" [ref=f3e486]
+          - cell "chisanupong.p" [ref=f3e487]
+          - cell "22/04/2026 16:23" [ref=f3e488]
+          - cell "chisanupong.p" [ref=f3e489]
+        - row [ref=f3e490]:
+          - cell [ref=f3e491]:
+            - generic [ref=f3e492]:
+              - button [ref=f3e493] [cursor=pointer]
+              - separator [ref=f3e499]
+              - button [ref=f3e500] [cursor=pointer]
+          - cell "PC001" [ref=f3e508]
+          - cell "Default" [ref=f3e510]
+          - cell "Yes" [ref=f3e511]
+          - cell "26/05/2025 11:53" [ref=f3e512]
+          - cell "Interface Honda Shipment" [ref=f3e513]
+          - cell "14/11/2024 17:30" [ref=f3e514]
+          - cell "Interface Honda Shipment" [ref=f3e515]
+        - row [ref=f3e516]:
+          - cell [ref=f3e517]:
+            - generic [ref=f3e518]:
+              - button [ref=f3e519] [cursor=pointer]
+              - separator [ref=f3e525]
+              - button [ref=f3e526] [cursor=pointer]
+          - cell "EEd" [ref=f3e534]
+          - cell "EEd" [ref=f3e536]
+          - cell "Yes" [ref=f3e537]
+          - cell "26/05/2025 11:53" [ref=f3e538]
+          - cell "disorn" [ref=f3e539]
+          - cell "27/03/2023 19:04" [ref=f3e540]
+          - cell "Interface Tipco" [ref=f3e541]
+        - row [ref=f3e542]:
+          - cell [ref=f3e543]:
+            - generic [ref=f3e544]:
+              - button [ref=f3e545] [cursor=pointer]
+              - separator [ref=f3e551]
+              - button [ref=f3e552] [cursor=pointer]
+          - cell "PD001" [ref=f3e560]
+          - cell "Electronics" [ref=f3e562]
+          - cell "Yes" [ref=f3e563]
+          - cell "01/10/2026 10:42" [ref=f3e564]
+          - cell "com1_sasiwan.c" [ref=f3e565]
+          - cell "01/10/2026 10:42" [ref=f3e566]
+          - cell "com1_sasiwan.c" [ref=f3e567]
+        - row [ref=f3e568]:
+          - cell [ref=f3e569]:
+            - generic [ref=f3e570]:
+              - button [ref=f3e571] [cursor=pointer]
+              - separator [ref=f3e577]
+              - button [ref=f3e578] [cursor=pointer]
+          - cell "PC002" [ref=f3e586]
+          - cell "Face" [ref=f3e588]
+          - cell "Yes" [ref=f3e589]
+          - cell "26/05/2025 11:53" [ref=f3e590]
+          - cell "machadit.t" [ref=f3e591]
+          - cell "18/11/2020 21:39" [ref=f3e592]
+          - cell "Dodo" [ref=f3e593]
+        - row [ref=f3e594]:
+          - cell [ref=f3e595]:
+            - generic [ref=f3e596]:
+              - button [ref=f3e597] [cursor=pointer]
+              - separator [ref=f3e603]
+              - button [ref=f3e604] [cursor=pointer]
+          - cell "PD019" [ref=f3e612]
+          - cell "Food & Beverages" [ref=f3e614]
+          - cell "Yes" [ref=f3e615]
+          - cell "01/10/2026 10:46" [ref=f3e616]
+          - cell "com1_sasiwan.c" [ref=f3e617]
+          - cell "01/10/2026 10:46" [ref=f3e618]
+          - cell "com1_sasiwan.c" [ref=f3e619]
+        - row [ref=f3e620]:
+          - cell [ref=f3e621]:
+            - generic [ref=f3e622]:
+              - button [ref=f3e623] [cursor=pointer]
+              - separator [ref=f3e629]
+              - button [ref=f3e630] [cursor=pointer]
+          - cell "PC004" [ref=f3e638]
+          - cell "Food Supplement" [ref=f3e640]
+          - cell "Yes" [ref=f3e641]
+          - cell "26/05/2025 11:53" [ref=f3e642]
+          - cell "Dodo" [ref=f3e643]
+          - cell "18/11/2020 21:40" [ref=f3e644]
+          - cell "Dodo" [ref=f3e645]
+        - row [ref=f3e646]:
+          - cell [ref=f3e647]:
+            - generic [ref=f3e648]:
+              - button [ref=f3e649] [cursor=pointer]
+              - separator [ref=f3e655]
+              - button [ref=f3e656] [cursor=pointer]
+          - cell "PD007" [ref=f3e664]
+          - cell "Furniture" [ref=f3e666]
+          - cell "Yes" [ref=f3e667]
+          - cell "01/10/2026 10:44" [ref=f3e668]
+          - cell "com1_sasiwan.c" [ref=f3e669]
+          - cell "01/10/2026 10:44" [ref=f3e670]
+          - cell "com1_sasiwan.c" [ref=f3e671]
+        - row [ref=f3e672]:
+          - cell [ref=f3e673]:
+            - generic [ref=f3e674]:
+              - button [ref=f3e675] [cursor=pointer]
+              - separator [ref=f3e681]
+              - button [ref=f3e682] [cursor=pointer]
+          - cell "PD023" [ref=f3e690]
+          - cell "Garden & Outdoor" [ref=f3e692]
+          - cell "Yes" [ref=f3e693]
+          - cell "01/10/2026 10:47" [ref=f3e694]
+          - cell "com1_sasiwan.c" [ref=f3e695]
+          - cell "01/10/2026 10:47" [ref=f3e696]
+          - cell "com1_sasiwan.c" [ref=f3e697]
+        - row [ref=f3e698]:
+          - cell [ref=f3e699]:
+            - generic [ref=f3e700]:
+              - button [ref=f3e701] [cursor=pointer]
+              - separator [ref=f3e707]
+              - button [ref=f3e708] [cursor=pointer]
+          - cell "PCC001" [ref=f3e716]
+          - cell "Hair" [ref=f3e718]
+          - cell "Yes" [ref=f3e719]
+          - cell "26/05/2025 11:53" [ref=f3e720]
+          - cell "sermsak.k" [ref=f3e721]
+          - cell "18/11/2020 21:39" [ref=f3e722]
+          - cell "Dodo" [ref=f3e723]
+        - row [ref=f3e724]:
+          - cell [ref=f3e725]:
+            - generic [ref=f3e726]:
+              - button [ref=f3e727] [cursor=pointer]
+              - separator [ref=f3e733]
+              - button [ref=f3e734] [cursor=pointer]
+          - cell "P011" [ref=f3e742]
+          - cell "Hairer" [ref=f3e744]
+          - cell "Yes" [ref=f3e745]
+          - cell "26/05/2025 11:53" [ref=f3e746]
+          - cell "sysadmin" [ref=f3e747]
+          - cell "27/07/2021 09:45" [ref=f3e748]
+          - cell "sysadmin" [ref=f3e749]
+        - row [ref=f3e750]:
+          - cell [ref=f3e751]:
+            - generic [ref=f3e752]:
+              - button [ref=f3e753] [cursor=pointer]
+              - separator [ref=f3e759]
+              - button [ref=f3e760] [cursor=pointer]
+          - cell "PD014" [ref=f3e768]
+          - cell "Health & Wellness" [ref=f3e770]
+          - cell "Yes" [ref=f3e771]
+          - cell "01/10/2026 10:45" [ref=f3e772]
+          - cell "com1_sasiwan.c" [ref=f3e773]
+          - cell "01/10/2026 10:45" [ref=f3e774]
+          - cell "com1_sasiwan.c" [ref=f3e775]
+        - row [ref=f3e776]:
+          - cell [ref=f3e777]:
+            - generic [ref=f3e778]:
+              - button [ref=f3e779] [cursor=pointer]
+              - separator [ref=f3e785]
+              - button [ref=f3e786] [cursor=pointer]
+          - cell "PD005" [ref=f3e794]
+          - cell "Home Appliances" [ref=f3e796]
+          - cell "Yes" [ref=f3e797]
+          - cell "01/10/2026 10:43" [ref=f3e798]
+          - cell "com1_sasiwan.c" [ref=f3e799]
+          - cell "01/10/2026 10:43" [ref=f3e800]
+          - cell "com1_sasiwan.c" [ref=f3e801]
+        - row [ref=f3e802]:
+          - cell [ref=f3e803]:
+            - generic [ref=f3e804]:
+              - button [ref=f3e805] [cursor=pointer]
+              - separator [ref=f3e811]
+              - button [ref=f3e812] [cursor=pointer]
+          - cell "PD008" [ref=f3e820]
+          - cell "Home Decoration" [ref=f3e822]
+          - cell "Yes" [ref=f3e823]
+          - cell "01/10/2026 10:44" [ref=f3e824]
+          - cell "com1_sasiwan.c" [ref=f3e825]
+          - cell "01/10/2026 10:44" [ref=f3e826]
+          - cell "com1_sasiwan.c" [ref=f3e827]
+        - row [ref=f3e828]:
+          - cell [ref=f3e829]:
+            - generic [ref=f3e830]:
+              - button [ref=f3e831] [cursor=pointer]
+              - separator [ref=f3e837]
+              - button [ref=f3e838] [cursor=pointer]
+          - cell "PD030" [ref=f3e846]
+          - cell "Industrial Equipment" [ref=f3e848]
+          - cell "Yes" [ref=f3e849]
+          - cell "01/10/2026 10:48" [ref=f3e850]
+          - cell "com1_sasiwan.c" [ref=f3e851]
+          - cell "01/10/2026 10:48" [ref=f3e852]
+          - cell "com1_sasiwan.c" [ref=f3e853]
+        - row [ref=f3e854]:
+          - cell [ref=f3e855]:
+            - generic [ref=f3e856]:
+              - button [ref=f3e857] [cursor=pointer]
+              - separator [ref=f3e863]
+              - button [ref=f3e864] [cursor=pointer]
+          - cell "PD027" [ref=f3e872]
+          - cell "Jewelry & Accessories" [ref=f3e874]
+          - cell "Yes" [ref=f3e875]
+          - cell "01/10/2026 10:48" [ref=f3e876]
+          - cell "com1_sasiwan.c" [ref=f3e877]
+          - cell "01/10/2026 10:48" [ref=f3e878]
+          - cell "com1_sasiwan.c" [ref=f3e879]
+        - row [ref=f3e880]:
+          - cell [ref=f3e881]:
+            - generic [ref=f3e882]:
+              - button [ref=f3e883] [cursor=pointer]
+              - separator [ref=f3e889]
+              - button [ref=f3e890] [cursor=pointer]
+          - cell "PD006" [ref=f3e898]
+          - cell "Kitchen Appliances" [ref=f3e900]
+          - cell "Yes" [ref=f3e901]
+          - cell "01/10/2026 10:43" [ref=f3e902]
+          - cell "com1_sasiwan.c" [ref=f3e903]
+          - cell "01/10/2026 10:43" [ref=f3e904]
+          - cell "com1_sasiwan.c" [ref=f3e905]
+        - row [ref=f3e906]:
+          - cell [ref=f3e907]:
+            - generic [ref=f3e908]:
+              - button [ref=f3e909] [cursor=pointer]
+              - separator [ref=f3e915]
+              - button [ref=f3e916] [cursor=pointer]
+          - cell "5" [ref=f3e924]
+          - cell "Local" [ref=f3e926]
+          - cell "Yes" [ref=f3e927]
+          - cell "26/05/2025 11:53" [ref=f3e928]
+          - cell "patchamon-uat" [ref=f3e929]
+          - cell "15/07/2024 11:22" [ref=f3e930]
+          - cell "patchamon-uat" [ref=f3e931]
+        - row [ref=f3e932]:
+          - cell [ref=f3e933]:
+            - generic [ref=f3e934]:
+              - button [ref=f3e935] [cursor=pointer]
+              - separator [ref=f3e941]
+              - button [ref=f3e942] [cursor=pointer]
+          - cell "LOTUS" [ref=f3e950]
+          - cell "LOTUS" [ref=f3e952]
+          - cell "Yes" [ref=f3e953]
+          - cell "26/05/2025 11:53" [ref=f3e954]
+          - cell "system" [ref=f3e955]
+          - cell "13/04/2020 15:40" [ref=f3e956]
+          - cell "system" [ref=f3e957]
+        - row [ref=f3e958]:
+          - cell [ref=f3e959]:
+            - generic [ref=f3e960]:
+              - button [ref=f3e961] [cursor=pointer]
+              - separator [ref=f3e967]
+              - button [ref=f3e968] [cursor=pointer]
+          - cell "PC005" [ref=f3e976]
+          - cell "Makeup" [ref=f3e978]
+          - cell "Yes" [ref=f3e979]
+          - cell "26/05/2025 11:53" [ref=f3e980]
+          - cell "Dodo" [ref=f3e981]
+          - cell "18/11/2020 21:40" [ref=f3e982]
+          - cell "Dodo" [ref=f3e983]
+        - row [ref=f3e984]:
+          - cell [ref=f3e985]:
+            - generic [ref=f3e986]:
+              - button [ref=f3e987] [cursor=pointer]
+              - separator [ref=f3e993]
+              - button [ref=f3e994] [cursor=pointer]
+          - cell "MAKRO" [ref=f3e1002]
+          - cell "MAKRO" [ref=f3e1004]
+          - cell "Yes" [ref=f3e1005]
+          - cell "26/05/2025 11:53" [ref=f3e1006]
+          - cell "system" [ref=f3e1007]
+          - cell "13/04/2020 15:40" [ref=f3e1008]
+          - cell "system" [ref=f3e1009]
+        - row [ref=f3e1010]:
+          - cell [ref=f3e1011]:
+            - generic [ref=f3e1012]:
+              - button [ref=f3e1013] [cursor=pointer]
+              - separator [ref=f3e1019]
+              - button [ref=f3e1020] [cursor=pointer]
+          - cell "PD003" [ref=f3e1028]
+          - cell "Mobile Phones" [ref=f3e1030]
+          - cell "Yes" [ref=f3e1031]
+          - cell "01/10/2026 10:43" [ref=f3e1032]
+          - cell "com1_sasiwan.c" [ref=f3e1033]
+          - cell "01/10/2026 10:43" [ref=f3e1034]
+          - cell "com1_sasiwan.c" [ref=f3e1035]
+        - row [ref=f3e1036]:
+          - cell [ref=f3e1037]:
+            - generic [ref=f3e1038]:
+              - button [ref=f3e1039] [cursor=pointer]
+              - separator [ref=f3e1045]
+              - button [ref=f3e1046] [cursor=pointer]
+          - cell "PD028" [ref=f3e1054]
+          - cell "Musical Instruments" [ref=f3e1056]
+          - cell "Yes" [ref=f3e1057]
+          - cell "01/10/2026 10:48" [ref=f3e1058]
+          - cell "com1_sasiwan.c" [ref=f3e1059]
+          - cell "01/10/2026 10:48" [ref=f3e1060]
+          - cell "com1_sasiwan.c" [ref=f3e1061]
+        - row [ref=f3e1062]:
+          - cell [ref=f3e1063]:
+            - generic [ref=f3e1064]:
+              - button [ref=f3e1065] [cursor=pointer]
+              - separator [ref=f3e1071]
+              - button [ref=f3e1072] [cursor=pointer]
+          - cell "PD018" [ref=f3e1080]
+          - cell "Office Supplies" [ref=f3e1082]
+          - cell "Yes" [ref=f3e1083]
+          - cell "01/10/2026 10:46" [ref=f3e1084]
+          - cell "com1_sasiwan.c" [ref=f3e1085]
+          - cell "01/10/2026 10:46" [ref=f3e1086]
+          - cell "com1_sasiwan.c" [ref=f3e1087]
+        - row [ref=f3e1088]:
+          - cell [ref=f3e1089]:
+            - generic [ref=f3e1090]:
+              - button [ref=f3e1091] [cursor=pointer]
+              - separator [ref=f3e1097]
+              - button [ref=f3e1098] [cursor=pointer]
+          - cell "OTWD" [ref=f3e1106]
+          - cell "OTWD" [ref=f3e1108]
+          - cell "Yes" [ref=f3e1109]
+          - cell "26/05/2025 11:53" [ref=f3e1110]
+          - cell "napat" [ref=f3e1111]
+          - cell "09/05/2023 09:29" [ref=f3e1112]
+          - cell "napat" [ref=f3e1113]
+        - row [ref=f3e1114]:
+          - cell [ref=f3e1115]:
+            - generic [ref=f3e1116]:
+              - button [ref=f3e1117] [cursor=pointer]
+              - separator [ref=f3e1123]
+              - button [ref=f3e1124] [cursor=pointer]
+          - cell "P0010" [ref=f3e1132]
+          - cell "P0010" [ref=f3e1134]
+          - cell "Yes" [ref=f3e1135]
+          - cell "26/05/2025 11:53" [ref=f3e1136]
+          - cell "tachsura.na" [ref=f3e1137]
+          - cell "11/11/2021 16:15" [ref=f3e1138]
+          - cell "pornsawan.s" [ref=f3e1139]
+        - row [ref=f3e1140]:
+          - cell [ref=f3e1141]:
+            - generic [ref=f3e1142]:
+              - button [ref=f3e1143] [cursor=pointer]
+              - separator [ref=f3e1149]
+              - button [ref=f3e1150] [cursor=pointer]
+          - cell "P012" [ref=f3e1158]
+          - cell "P012" [ref=f3e1160]
+          - cell "Yes" [ref=f3e1161]
+          - cell "26/05/2025 11:53" [ref=f3e1162]
+          - cell "tachsura.na" [ref=f3e1163]
+          - cell "30/07/2021 14:14" [ref=f3e1164]
+          - cell "disorn" [ref=f3e1165]
+        - row [ref=f3e1166]:
+          - cell [ref=f3e1167]:
+            - generic [ref=f3e1168]:
+              - button [ref=f3e1169] [cursor=pointer]
+              - separator [ref=f3e1175]
+              - button [ref=f3e1176] [cursor=pointer]
+          - cell "Part" [ref=f3e1184]
+          - cell "Part" [ref=f3e1186]
+          - cell "Yes" [ref=f3e1187]
+          - cell "26/05/2025 11:53" [ref=f3e1188]
+          - cell "napat" [ref=f3e1189]
+          - cell "15/05/2023 13:55" [ref=f3e1190]
+          - cell "napat" [ref=f3e1191]
+        - row [ref=f3e1192]:
+          - cell [ref=f3e1193]:
+            - generic [ref=f3e1194]:
+              - button [ref=f3e1195] [cursor=pointer]
+              - separator [ref=f3e1201]
+              - button [ref=f3e1202] [cursor=pointer]
+          - cell "PD021" [ref=f3e1210]
+          - cell "Pet Supplies" [ref=f3e1212]
+          - cell "Yes" [ref=f3e1213]
+          - cell "01/10/2026 10:47" [ref=f3e1214]
+          - cell "com1_sasiwan.c" [ref=f3e1215]
+          - cell "01/10/2026 10:47" [ref=f3e1216]
+          - cell "com1_sasiwan.c" [ref=f3e1217]
+        - row [ref=f3e1218]:
+          - cell [ref=f3e1219]:
+            - generic [ref=f3e1220]:
+              - button [ref=f3e1221] [cursor=pointer]
+              - separator [ref=f3e1227]
+              - button [ref=f3e1228] [cursor=pointer]
+          - cell "ProductCat" [ref=f3e1236]
+          - cell "ProductCat" [ref=f3e1238]
+          - cell "Yes" [ref=f3e1239]
+          - cell "26/05/2025 11:53" [ref=f3e1240]
+          - cell "sysadmin" [ref=f3e1241]
+          - cell "03/11/2022 11:25" [ref=f3e1242]
+          - cell "sysadmin" [ref=f3e1243]
+        - row [ref=f3e1244]:
+          - cell [ref=f3e1245]:
+            - generic [ref=f3e1246]:
+              - button [ref=f3e1247] [cursor=pointer]
+              - separator [ref=f3e1253]
+              - button [ref=f3e1254] [cursor=pointer]
+          - cell "PD010" [ref=f3e1262]
+          - cell "Shoes" [ref=f3e1264]
+          - cell "Yes" [ref=f3e1265]
+          - cell "01/10/2026 10:44" [ref=f3e1266]
+          - cell "com1_sasiwan.c" [ref=f3e1267]
+          - cell "01/10/2026 10:44" [ref=f3e1268]
+          - cell "com1_sasiwan.c" [ref=f3e1269]
+        - row [ref=f3e1270]:
+          - cell [ref=f3e1271]:
+            - generic [ref=f3e1272]:
+              - button [ref=f3e1273] [cursor=pointer]
+              - separator [ref=f3e1279]
+              - button [ref=f3e1280] [cursor=pointer]
+          - cell "PD020" [ref=f3e1288]
+          - cell "Snacks & Desserts" [ref=f3e1290]
+          - cell "Yes" [ref=f3e1291]
+          - cell "01/10/2026 10:46" [ref=f3e1292]
+          - cell "com1_sasiwan.c" [ref=f3e1293]
+          - cell "01/10/2026 10:46" [ref=f3e1294]
+          - cell "com1_sasiwan.c" [ref=f3e1295]
+        - row [ref=f3e1296]:
+          - cell [ref=f3e1297]:
+            - generic [ref=f3e1298]:
+              - button [ref=f3e1299] [cursor=pointer]
+              - separator [ref=f3e1305]
+              - button [ref=f3e1306] [cursor=pointer]
+          - cell "PD015" [ref=f3e1314]
+          - cell "Sports & Outdoors" [ref=f3e1316]
+          - cell "Yes" [ref=f3e1317]
+          - cell "01/10/2026 10:45" [ref=f3e1318]
+          - cell "com1_sasiwan.c" [ref=f3e1319]
+          - cell "01/10/2026 10:45" [ref=f3e1320]
+          - cell "com1_sasiwan.c" [ref=f3e1321]
+        - row [ref=f3e1322]:
+          - cell [ref=f3e1323]:
+            - generic [ref=f3e1324]:
+              - button [ref=f3e1325] [cursor=pointer]
+              - separator [ref=f3e1331]
+              - button [ref=f3e1332] [cursor=pointer]
+          - cell "T27" [ref=f3e1340]
+          - cell "T27" [ref=f3e1342]
+          - cell "Yes" [ref=f3e1343]
+          - cell "26/05/2025 11:53" [ref=f3e1344]
+          - cell "tachsura.na" [ref=f3e1345]
+          - cell "25/11/2022 11:10" [ref=f3e1346]
+          - cell "jiraphon.a" [ref=f3e1347]
+        - row [ref=f3e1348]:
+          - cell [ref=f3e1349]:
+            - generic [ref=f3e1350]:
+              - button [ref=f3e1351] [cursor=pointer]
+              - separator [ref=f3e1357]
+              - button [ref=f3e1358] [cursor=pointer]
+          - cell "1Test" [ref=f3e1366]
+          - cell "test" [ref=f3e1368]
+          - cell "No" [ref=f3e1369]
+          - cell "13/06/2026 20:14" [ref=f3e1370]
+          - cell "Trainee02" [ref=f3e1371]
+          - cell "13/06/2026 20:14" [ref=f3e1372]
+          - cell "Trainee02" [ref=f3e1373]
+        - row [ref=f3e1374]:
+          - cell [ref=f3e1375]:
+            - generic [ref=f3e1376]:
+              - button [ref=f3e1377] [cursor=pointer]
+              - separator [ref=f3e1383]
+              - button [ref=f3e1384] [cursor=pointer]
+          - cell "PD024" [ref=f3e1392]
+          - cell "Tools & Hardware" [ref=f3e1394]
+          - cell "Yes" [ref=f3e1395]
+          - cell "01/10/2026 10:47" [ref=f3e1396]
+          - cell "com1_sasiwan.c" [ref=f3e1397]
+          - cell "01/10/2026 10:47" [ref=f3e1398]
+          - cell "com1_sasiwan.c" [ref=f3e1399]
+        - row [ref=f3e1400]:
+          - cell [ref=f3e1401]:
+            - generic [ref=f3e1402]:
+              - button [ref=f3e1403] [cursor=pointer]
+              - separator [ref=f3e1409]
+              - button [ref=f3e1410] [cursor=pointer]
+          - cell "PD016" [ref=f3e1418]
+          - cell "Toys & Games" [ref=f3e1420]
+          - cell "Yes" [ref=f3e1421]
+          - cell "01/10/2026 10:46" [ref=f3e1422]
+          - cell "com1_sasiwan.c" [ref=f3e1423]
+          - cell "01/10/2026 10:46" [ref=f3e1424]
+          - cell "com1_sasiwan.c" [ref=f3e1425]
+        - row [ref=f3e1426]:
+          - cell [ref=f3e1427]:
+            - generic [ref=f3e1428]:
+              - button [ref=f3e1429] [cursor=pointer]
+              - separator [ref=f3e1435]
+              - button [ref=f3e1436] [cursor=pointer]
+          - cell "PD029" [ref=f3e1444]
+          - cell "Travel Accessories" [ref=f3e1446]
+          - cell "Yes" [ref=f3e1447]
+          - cell "01/10/2026 10:48" [ref=f3e1448]
+          - cell "com1_sasiwan.c" [ref=f3e1449]
+          - cell "01/10/2026 10:48" [ref=f3e1450]
+          - cell "com1_sasiwan.c" [ref=f3e1451]
+        - row [ref=f3e1452]:
+          - cell [ref=f3e1453]:
+            - generic [ref=f3e1454]:
+              - button [ref=f3e1455] [cursor=pointer]
+              - separator [ref=f3e1461]
+              - button [ref=f3e1462] [cursor=pointer]
+          - cell "TSL 231" [ref=f3e1470]
+          - cell "TSL 231" [ref=f3e1472]
+          - cell "Yes" [ref=f3e1473]
+          - cell "20/08/2026 11:55" [ref=f3e1474]
+          - cell "gotadmin" [ref=f3e1475]
+          - cell "20/08/2026 11:55" [ref=f3e1476]
+          - cell "gotadmin" [ref=f3e1477]
+        - row [ref=f3e1478]:
+          - cell [ref=f3e1479]:
+            - generic [ref=f3e1480]:
+              - button [ref=f3e1481] [cursor=pointer]
+              - separator [ref=f3e1487]
+              - button [ref=f3e1488] [cursor=pointer]
+          - cell "TSL" [ref=f3e1496]
+          - cell "TSL-001" [ref=f3e1498]
+          - cell "Yes" [ref=f3e1499]
+          - cell "20/08/2026 11:48" [ref=f3e1500]
+          - cell "gotadmin" [ref=f3e1501]
+          - cell "20/08/2026 11:48" [ref=f3e1502]
+          - cell "gotadmin" [ref=f3e1503]
+        - row [ref=f3e1504]:
+          - cell [ref=f3e1505]:
+            - generic [ref=f3e1506]:
+              - button [ref=f3e1507] [cursor=pointer]
+              - separator [ref=f3e1513]
+              - button [ref=f3e1514] [cursor=pointer]
+          - cell "PD012" [ref=f3e1522]
+          - cell "Watches" [ref=f3e1524]
+          - cell "Yes" [ref=f3e1525]
+          - cell "01/10/2026 10:45" [ref=f3e1526]
+          - cell "com1_sasiwan.c" [ref=f3e1527]
+          - cell "01/10/2026 10:45" [ref=f3e1528]
+          - cell "com1_sasiwan.c" [ref=f3e1529]
+        - row [ref=f3e1530]:
+          - cell [ref=f3e1531]:
+            - generic [ref=f3e1532]:
+              - button [ref=f3e1533] [cursor=pointer]
+              - separator [ref=f3e1539]
+              - button [ref=f3e1540] [cursor=pointer]
+          - cell "P010" [ref=f3e1548]
+          - cell "ส้มตำ" [ref=f3e1550]
+          - cell "No" [ref=f3e1551]
+          - cell "26/05/2025 11:53" [ref=f3e1552]
+          - cell "sysadmin" [ref=f3e1553]
+          - cell "27/07/2021 09:29" [ref=f3e1554]
+          - cell "sysadmin" [ref=f3e1555]
+        - row [ref=f3e1556]:
+          - cell [ref=f3e1557]:
+            - generic [ref=f3e1558]:
+              - button [ref=f3e1559] [cursor=pointer]
+              - separator [ref=f3e1565]
+              - button [ref=f3e1566] [cursor=pointer]
+          - cell "P009" [ref=f3e1574]
+          - cell "อุปกรณ์สำนักงาน" [ref=f3e1576]
+          - cell "Yes" [ref=f3e1577]
+          - cell "26/05/2025 11:53" [ref=f3e1578]
+          - cell "pinpana" [ref=f3e1579]
+          - cell "15/05/2020 11:32" [ref=f3e1580]
+          - cell "pinpana" [ref=f3e1581]
+```
