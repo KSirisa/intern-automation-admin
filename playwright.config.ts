@@ -1,10 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
+import path from 'path';
+
+// โหลดตัวแปรสภาพแวดล้อมจากไฟล์ .env
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // =========================================================================
-//  TARGET BASE URL (แก้ไข URL หลักสำหรับการรันเทสได้ที่นี่)
+//  TARGET BASE URL (ดึงจากไฟล์ .env หากไม่พบจะใช้ค่า Default)
 // =========================================================================
-
-const TARGET_BASE_URL = 'https://netcoresql.nostralogistics.com';
+const TARGET_BASE_URL = process.env.TARGET_BASE_URL || 'https://netcoresql.nostralogistics.com';
 
 export default defineConfig({
   // === 1. General Configuration ===

@@ -12,3 +12,4 @@ auth.json
 *.json
 !package.json
 !tsconfig.json
+.env
