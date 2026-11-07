@@ -13,9 +13,14 @@ setup('Login Page', async ({ page }) => {
 
   // ===================== Base URL ========================
   await page.goto('/account/login');
+<<<<<<< HEAD
 
   await page.getByRole('textbox', { name: 'Username' }).fill(username);
   await page.getByRole('textbox', { name: 'Password' }).fill(password);
+=======
+  await page.getByRole('textbox', { name: 'Username' }).fill('');
+  await page.getByRole('textbox', { name: 'Password' }).fill('');
+>>>>>>> 33efda9faaa7f92cac1c44a8a0621e74eaa00f64
 
   await page.getByRole('button', { name: 'Login' }).click();
 

@@ -8,7 +8,12 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 // =========================================================================
 //  TARGET BASE URL (ดึงจากไฟล์ .env หากไม่พบจะใช้ค่า Default)
 // =========================================================================
+<<<<<<< HEAD
 const TARGET_BASE_URL = process.env.TARGET_BASE_URL || 'https://netcoresql.nostralogistics.com';
+=======
+
+const TARGET_BASE_URL = '';
+>>>>>>> 33efda9faaa7f92cac1c44a8a0621e74eaa00f64
 
 export default defineConfig({
   // === 1. General Configuration ===
