@@ -4,7 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
 //  TARGET BASE URL (แก้ไข URL หลักสำหรับการรันเทสได้ที่นี่)
 // =========================================================================
 
-const TARGET_BASE_URL = 'https://netcoresql.nostralogistics.com';
+const TARGET_BASE_URL = '';
 
 export default defineConfig({
   // === 1. General Configuration ===
