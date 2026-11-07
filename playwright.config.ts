@@ -31,7 +31,7 @@ export default defineConfig({
   // === 3. Shared Options for All Projects ===
   use: {
     baseURL: TARGET_BASE_URL, // อ้างอิงจากตัวแปรด้านบนสุด
-    headless: true,
+    headless: false,
     trace: 'on',
     screenshot: 'on',
     video: 'on',
