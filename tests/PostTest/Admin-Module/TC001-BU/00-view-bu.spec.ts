@@ -50,10 +50,10 @@ test("View Business Unit Hierarchy", async ({ page }) => {
     await test.step("3.2 Test Manage Temporary User Flow", async () => {
       await safeClick(page.getByTitle("Manage Temporary User").nth(1), "Manage Temp User");
       await safeClick(page.getByTitle("Recovery"), "Recovery Button");
-      await page.getByText("Cancel", { exact: true }).click();
+      await page.getByText("OK", { exact: true }).click();
 
       await safeClick(page.getByTitle("Delete").nth(1), "Delete Temp User");
-      await page.getByText("Cancel", { exact: true }).click();
+      await page.getByText("OK", { exact: true }).click();
 
       await page.getByRole("button", { name: "Close" }).nth(3).click();
     });
