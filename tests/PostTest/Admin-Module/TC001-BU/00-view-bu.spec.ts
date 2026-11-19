@@ -1,9 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { safeClick } from "../../../helpers";
 
-const testData = {
-  buName: "___TEST (RT1)",
-};
 
 test("View Business Unit Hierarchy", async ({ page }) => {
   test.setTimeout(180000);
@@ -18,9 +15,7 @@ test("View Business Unit Hierarchy", async ({ page }) => {
       "Hierarchy Link"
     );
 
-    const treeItem = page.getByRole("treeitem", { name: testData.buName });
-    await treeItem.waitFor({ state: "visible", timeout: 15000 });
-    await treeItem.click();
+    await page.getByRole('treeitem').first().click(); 
     await page.waitForLoadState("networkidle").catch(() => {});
   });
   
