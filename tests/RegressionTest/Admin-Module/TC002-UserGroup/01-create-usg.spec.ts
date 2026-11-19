@@ -107,6 +107,7 @@ test("Groups - Create, Filter, Update and Delete Test", async ({ page }) => {
   // === Step 5: Delete Group ===
   await test.step("5. Delete Group", async () => {
     const deleteBtn = page.locator('a.app-commandBar-item[title="Delete"]');
+    await page.waitForTimeout(500);
     await deleteBtn.waitFor({ state: "visible" });
     await deleteBtn.scrollIntoViewIfNeeded();
     await deleteBtn.click();
