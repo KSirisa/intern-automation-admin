@@ -52,7 +52,7 @@ test("Business Unit Levels - Create Level Test", async ({ page }) => {
     }).fill(testData.levelNameLocal);
   });
 
-  // === Step 4: Click Cancel ===
+  // === Step 4: Click Save ===
   await test.step("4. Click Cancel", async () => {
     await page.getByRole("button", { name: "Save" }).click();
   });
